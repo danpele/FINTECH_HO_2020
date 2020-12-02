@@ -1,0 +1,8 @@
+
+Convergence and Divergence in European Bond Correlations
+
+SCHWENDNER P., SCHÜLE M., HILLEBRAND M.
+
+From 2004 to 2015, the market perception of the sovereign risks of the euro area government bonds experienced several different phases, reflected in a clear time structure of the correlation matrix between the yield changes. “Core” and “peripheral” bonds cluster in a bloc-like structure, but the correlations between the blocs are time-dependent and even become negative in periods of stress. Using noise-filtered partial correlation influences, this time dependency can be evaluated and visualized using network graphs. Our results support the view that market-implied spillover risks have decreased since the European rescue and stability mechanisms came into force in 2011. EFSF bond issues have been trading as part of the “core” bloc since 2011. In 2015, spillover risks reappeared during the Eurogroup’s negotiations with Greece, although the periphery yields did not show risk spreads that were as large as those in 2012.
+
+Keywords: Contagion risk; correlation networks; euro area; sovereign bonds; European Stability Mechanism; financial stability

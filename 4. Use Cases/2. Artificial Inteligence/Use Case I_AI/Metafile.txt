@@ -1,0 +1,24 @@
+Network models to enhance automated cryptocurrency portfolio management
+
+Paolo Giudici
+University of Pavia, Pavia, Italy
+Paolo Pagnottoni
+University of Pavia, Pavia, Italy
+Gloria Polinesi
+Universit´a Politecnica delle Marche, Ancona, Italy
+
+Abstract
+The usage of cryptocurrencies, together with that of financial automated
+consultancy, is widely spreading in the last few years. However, automated
+consultancy services are not yet exploiting the potentiality of this nascent
+market, which represents a class of innovative financial products that can
+be proposed by robo-advisors. For this reason, we propose a novel approach
+to build efficient portfolio allocation strategies involving volatile financial instruments
+such as cryptocurrencies. In other words, we develop an extension
+of the traditional Markowitz model which combines Random Matrix Theory
+and network measures, in order to achieve portfolio weights enhancing
+portfolios’ risk-return profiles. The results show that overall our model overperforms
+several competing alternatives, maintaining a relatively low level of
+risk.
+Keywords: Cryptocurrencies, Correlation networks, Network centrality,
+Portfolio optimization, Random Matrix theory, Minimal Spanning Tree.

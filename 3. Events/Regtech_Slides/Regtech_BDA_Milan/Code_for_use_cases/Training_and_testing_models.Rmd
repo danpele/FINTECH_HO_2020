@@ -1,0 +1,323 @@
+---
+title: "Credit Risk in P2P lending through BDA part I"
+prepared by: "FinTech HO2020 Project Consortium"
+date: "29 March 2019"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(readr)
+library(ggplot2)
+library(plotrix)
+library(caret)  
+library(ROCR)
+library(pROC)
+library(rpart)
+library(DescTools)
+library(partykit)
+library(randomForest)
+library(ggpubr)
+library(MASS)
+library(rpart.plot)
+library(rattle)
+
+
+rm(list=ls())
+
+#setwd("C:/Users/brank/Google Drive/Pavia/NETWORK/September 2017/EU Project (code and scripts)/Code/Workshop")
+#setwd("C:/Users/JP/Documents/Paolo/platform_experiments/filemanagement/files/2 - Modefinance_use_case")
+
+data_final_stand <- read_csv("data_final_stand.csv")
+data <- data_final_stand[-1]
+
+
+```
+
+
+## Structure and dimensions of the dataset
+We start by investigating the structure and the dimensions of the dataset
+```{r pressure_1, echo=FALSE}
+str(data)
+dim(data)
+head(data)
+```
+
+# Specify the type of variables
+```{r pressure_2, echo=FALSE}
+data[,c(20:25)] <- apply(data[,c(20:25)], 2, function(x) as.factor(as.character(x)))
+str(data)
+```
+
+
+# Investigate the variable status
+```{r pressure_3, echo=FALSE}
+PercTable(data$status)
+```
+
+
+# Investigate the variable status
+```{r pressure_4, echo=FALSE}
+ggstripchart(data, x = "ratio001", y = "status",
+             color = "status",
+             palette = c("darkturquoise", "darksalmon"))
+```
+
+
+# Investigate the variable status
+```{r pressure_5, echo=FALSE}
+counts <- table(data$status)  
+pie(counts)  
+
+slices <- table(data$status) 
+lbls <- c("active", "default")
+pie3D(slices,labels=lbls,
+   main="Pie Chart of the Status Variable", explode=0.5, radius=.9, labelcex = 1.2,  start=0.7)
+
+
+ggplot(data, aes(x = factor(1), y=status,fill=factor(status)) ) + geom_bar(width = 1,stat="identity")+coord_polar(theta = "y")
+
+```
+
+
+# Training vs Testing Dataset (stratified)
+```{r pressure_6, echo=FALSE}
+data <- data[-21]
+data$status <- as.factor(data$status)
+data$ratio036 <- as.factor(data$ratio036)
+data$ratio037 <- as.factor(data$ratio037)
+data$ratio039 <- as.factor(data$ratio039)
+data$ratio040 <- as.factor(data$ratio040)
+
+
+set.seed(1234)
+div <- createDataPartition(y = data$status, p = 0.7, list = F)
+
+# Training Sample
+data.train <- data[div,] # 70% here
+data.test <- data[-div,] # rest of the 30% data goes here
+
+PercTable(data$status)
+PercTable(data.train$status)
+PercTable(data.test$status)
+```
+
+
+#============= LOGIT MODEL WITH ALL VARIABLES ================#
+
+# Fit1: Logit - Training the model
+```{r pressure_7, echo=FALSE}
+fit1 <- glm(status ~ ., data=data.train,family=binomial())
+summary(fit1)
+```
+
+# Fit1: Logit - Significant variables with p-value < 0.05
+```{r pressure_8, echo=FALSE}
+significant.variables <- summary(fit1)$coeff[-1,4] < 0.05
+names(significant.variables)[significant.variables == TRUE]
+```
+
+## Fit1: Logit - Odds ratios and 95% CI
+```{r pressure_9, echo=FALSE}
+exp(cbind(OR = coef(fit1), confint(fit1)))
+#or 
+#exp(cbind(OR = coef(fit1), confint.default(fit1)))
+```
+
+
+# Fit1: Logit - Prediction
+## Fit1: Logit - ROC curve 
+```{r pressure_10, echo=FALSE}
+data.test$fit1_score <- predict(fit1,type='response',data.test)
+fit1_pred <- prediction(data.test$fit1_score, data.test$status)
+fit1_roc <- performance(fit1_pred, "tpr", "fpr")
+plot(fit1_roc, lwd=1, colorize = TRUE, main = "Fit1: Logit - ROC Curve")
+lines(x=c(0, 1), y=c(0, 1), col="black", lwd=1, lty=3)
+```
+
+
+## Fit1: Logit - Precision/Recall Curve
+```{r pressure_11, echo=FALSE}
+fit1_precision <- performance(fit1_pred, measure = "prec", x.measure = "rec")
+plot(fit1_precision, main="Fit1: Logit - Precision vs Recall")
+```
+
+# Fit1:Logit - Confusion Matrix
+```{r pressure_12, echo=FALSE}
+confusionMatrix(as.factor(round(data.test$fit1_score)), data.test$status)
+
+```
+
+# Fit1: Logit - Predictive Utility 
+```{r pressure_13, echo=FALSE}
+fit1_auc <- performance(fit1_pred, measure = "auc")
+fit1_gini <- (2*fit1_auc@y.values[[1]] - 1)
+fit1_ks <- round(max(attr(fit1_roc, 'y.value')[[1]] - attr(fit1_roc, 'x.values')[[1]]), 2)
+cat("AUC: ",fit1_auc@y.values[[1]]*100,"\tGini:", fit1_gini*100, "\tKS Statistic: ", fit1_ks*100,  "\n")
+```
+
+
+
+
+#============= LOGIT MODEL WITH VARIABLE SELECTION ================#
+# Fit2: Logit - Training the model
+```{r pressure_14, echo=FALSE}
+step <- stepAIC(fit1, direction="both")
+step$anova 
+
+fit2 <- glm(status ~ ratio002 + ratio003 + ratio004 + ratio005 + ratio006 + 
+    ratio011 + ratio012 + DPO + DSO + turnover + ratio036 + ratio037 + 
+    ratio039 + ratio040, data=data.train,family=binomial())
+summary(fit2)
+```
+
+## Fit2: Logit - Odds ratios and 95% CI
+```{r pressure_15, echo=FALSE}
+exp(cbind(OR = coef(fit2), confint(fit2)))
+```
+
+
+# Fit2: Logit - Prediction
+## Fit2: Logit - ROC curve 
+```{r pressure_16, echo=FALSE}
+data.test$fit2_score <- predict(fit2,type='response',data.test)
+fit2_pred <- prediction(data.test$fit2_score, data.test$status)
+fit2_roc <- performance(fit2_pred, "tpr", "fpr")
+plot(fit2_roc, lwd=1, colorize = TRUE, main = "Fit2: Logit - ROC Curve")
+lines(x=c(0, 1), y=c(0, 1), col="black", lwd=1, lty=3)
+```
+
+
+## Fit2: Logit - Precision/Recall Curve
+```{r pressure_17, echo=FALSE}
+fit2_precision <- performance(fit2_pred, measure = "prec", x.measure = "rec")
+plot(fit2_precision, main="Fit2: Logit - Precision vs Recall")
+```
+
+# Fit2:Logit - Confusion Matrix
+```{r pressure_18, echo=FALSE}
+confusionMatrix(as.factor(round(data.test$fit2_score)), data.test$status)
+
+```
+
+# Fit2: Logit - Predictive Utility 
+```{r pressure_19, echo=FALSE}
+fit2_auc <- performance(fit2_pred, measure = "auc")
+fit2_gini <- (2*fit2_auc@y.values[[1]] - 1)
+fit2_ks <- round(max(attr(fit2_roc, 'y.value')[[1]] - attr(fit2_roc, 'x.values')[[1]]), 2)
+cat("AUC: ",fit2_auc@y.values[[1]]*100,"\tGini:", fit2_gini*100, "\tKS Statistic: ", fit2_ks*100,  "\n")
+```
+
+
+
+
+#================== CART ============================#
+# Fit3: CART - Training the model
+```{r pressure_20, echo=FALSE}
+
+fit3 <- rpart(status ~ ratio002 + ratio003 + ratio004 + ratio005 + ratio006 + ratio011 + ratio012 + DPO + DSO + turnover + ratio036 + ratio037 + 
+    ratio039 + ratio040, data=data.train, method="class")
+summary(fit3)
+print(fit3)
+```
+
+# Fit3: CART - The Tree Structure
+```{r pressure_21, echo=FALSE}
+printcp(fit3)
+plot(fit3, margin = 0.2, main="Fit3: CART Tree")
+text(fit3, cex=0.8)
+prp(fit3,type=2,extra=1,  main="Fit3: CART Tree")
+```
+
+# Fit3: CART - The Tree Structure
+```{r pressure_22, echo=FALSE}
+fancyRpartPlot(fit3)
+```
+
+
+## Fit3: CART - Prediction
+## Fit3: CART - ROC curve 
+```{r pressure_23, echo=FALSE}
+data.test$fit3_score <- predict(fit3, data.test, type="prob")
+fit3_pred <- prediction(data.test$fit3_score[,2], data.test$status)
+fit3_roc <- performance(fit3_pred, "tpr", "fpr")
+plot(fit3_roc, lwd=1, colorize = TRUE, main = "Fit3: CART - ROC Curve")
+lines(x=c(0, 1), y=c(0, 1), col="black", lwd=1, lty=3)
+```
+
+## Fit3: CART - Precision/Recall Curve
+```{r pressure_24, echo=FALSE}
+fit3_precision <- performance(fit3_pred, measure = "prec", x.measure = "rec")
+plot(fit3_precision, main="Fit3: CART - Precision vs Recall")
+```
+
+# Fit3:CART - Confusion Matrix
+```{r pressure_25, echo=FALSE}
+confusionMatrix(as.factor(round(data.test$fit3_score[,2])), data.test$status)
+```
+
+# Fit3: CART - Predictive Utility 
+```{r pressure26, echo=FALSE}
+fit3_auc <- performance(fit3_pred, measure = "auc")
+fit3_gini <- (2*fit3_auc@y.values[[1]] - 1)
+fit3_ks <- round(max(attr(fit3_roc, 'y.value')[[1]] - attr(fit3_roc, 'x.values')[[1]]), 2)
+cat("AUC: ",fit3_auc@y.values[[1]]*100,"\tGini:", fit3_gini*100, "\tKS Statistic: ", fit3_ks*100,  "\n")
+```
+
+
+#===================== RANDOM FOREST ======================#
+# RF: Training the model
+```{r pressure_27, echo=FALSE}
+fit4 <- randomForest(status ~ ratio002 + ratio003 + ratio004 + ratio005 + ratio006 + ratio011 + ratio012 + DPO + DSO + turnover + ratio036 + ratio037 + ratio039 + ratio040, data=data.train, mtry=2, ntree=1000, 
+                      keep.forest=TRUE, importance=TRUE)
+summary(fit4)
+print(fit4)
+```
+
+# Fit4: RF - Plot variable importance
+```{r pressure_28, echo=FALSE}
+varImpPlot(fit4, main="Fit4: RF - Variable Importance")
+```
+
+## Fit4: RF - Prediction
+## Fit4: RF - ROC curve 
+```{r pressure_29, echo=FALSE}
+data.test$fit4_score <- predict(fit4, data.test, type="prob")
+fit4_pred <- prediction(data.test$fit4_score[,2], data.test$status)
+fit4_roc <- performance(fit4_pred, "tpr", "fpr")
+plot(fit4_roc, lwd=1, colorize = TRUE, main = "Fit4: RF - ROC Curve")
+lines(x=c(0, 1), y=c(0, 1), col="black", lwd=1, lty=3)
+```
+
+## Fit4: RF - Precision/Recall Curve
+```{r pressure_30, echo=FALSE}
+fit4_precision <- performance(fit4_pred, measure = "prec", x.measure = "rec")
+plot(fit4_precision, main="Fit4: RF - Precision vs Recall")
+```
+
+# Fit4:RF - Confusion Matrix
+```{r pressure_31, echo=FALSE}
+confusionMatrix(as.factor(round(data.test$fit4_score[,2])), data.test$status)
+```
+
+# Fit4: RF - Predictive Utility 
+```{r pressure_32, echo=FALSE}
+fit4_auc <- performance(fit4_pred, measure = "auc")
+fit4_gini <- (2*fit4_auc@y.values[[1]] - 1)
+fit4_ks <- round(max(attr(fit4_roc, 'y.value')[[1]] - attr(fit4_roc, 'x.values')[[1]]), 2)
+cat("AUC: ",fit4_auc@y.values[[1]]*100,"\tGini:", fit4_gini*100, "\tKS Statistic: ", fit4_ks*100,  "\n")
+```
+
+
+#Compare ROC Performance of Models
+```{r pressure_33, echo=FALSE}
+plot(fit1_roc, col='blue', lwd=1,main='ROCs: Model Performance Comparision - MST') # logit
+plot(fit2_roc, col='black',lwd=1, add=TRUE); # logit with step
+plot(fit3_roc, col='green',lwd=1, add=TRUE) #CART
+plot(fit4_roc, col='yellow',lwd=1, add=TRUE) #RF
+legend(0.6,0.5,
+       c('Logit_All Var','Logit_Step', 'CART', 'RF'),
+       col=c('blue','black', 'green', 'yellow', 'red'),
+       lwd=3)
+```

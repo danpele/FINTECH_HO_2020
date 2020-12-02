@@ -1,0 +1,8 @@
+\babel@toc {english}{}
+\beamer@sectionintoc {2}{Motivation}{2}{0}{1}
+\beamer@sectionintoc {3}{Data and descriptives}{7}{0}{2}
+\beamer@sectionintoc {4}{Classification}{4}{0}{3}
+\beamer@sectionintoc {5}{Explanation}{10}{0}{4}
+\beamer@sectionintoc {6}{Video}{8}{0}{5}
+\beamer@sectionintoc {7}{Conclusion}{3}{0}{6}
+\beamer@sectionintoc {9}{Appendix}{2}{0}{7}

@@ -1,0 +1,119 @@
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(readr)
+library(ggplot2)
+library(plotrix)
+library(rpart)
+library(rpart.plot)
+library(MASS)
+library(caret)  
+library(ROCR)
+library(pROC)
+library(rpart)
+library(DescTools)
+library(partykit)
+library(randomForest)
+library(ggpubr)
+library(rattle)
+
+
+
+rm(list=ls())
+
+#setwd("C:/Users/brank/Google Drive/Pavia/NETWORK/September 2017/EU Project (code and scripts)/Code/Workshop")
+#final_dataset_smes <- read_csv("final_dataset_smes.csv")
+#setwd("C:/Users/sabrina.stella/Dropbox (modeFinance)/H2020/Definitivi")
+#setwd("E:/Utenti/Andrea/Dropbox (modeFinance)/LAVORO/Andrea/W82-ProgettoUniPavia/Definitivi")
+data_final_stand <- read_csv("final_dataset_mfi_test.csv")
+data <- data_final_stand[-1]
+
+```
+
+# Training vs Testing Dataset (stratified)
+```{r dataset_splitting, echo=FALSE}
+str(data)
+
+set.seed(1234)
+div <- createDataPartition(y = data$status, p = 0.7, list = F)
+
+# Training Sample
+data.train <- data[div,] # 70% here
+data.test <- data[-div,] # rest of the 30% data goes here
+
+PercTable(data$status)
+PercTable(data.train$status)
+PercTable(data.test$status)
+```
+
+#======= LOGIT MODEL SELECTED VARIABLE=============#
+# Fit1: Logit - Training the model
+```{r Logit_ , echo=FALSE}
+# select active (0) company belonging to a given sector
+fit1 <- glm(status ~ ta_tl + current_ratio + ROI + ROE + turnover_assets1 + 
+    EBITDA_int_paid + EBITA_op_revenues + DPO + DSO + turnover, data=data.train, family=binomial())
+summary(fit1)
+```
+
+# Fit1: Logit - Prediction
+## Fit1: Logit - ROC curve 
+```{r logit_ROC2, echo=FALSE}
+data.test$fit1_score <- predict(fit1,type='response',data.test)
+fit1_pred <- prediction(data.test$fit1_score, data.test$status)
+fit1_roc <- performance(fit1_pred, "tpr", "fpr")
+plot(fit1_roc, lwd=1, colorize = TRUE, main = "Fit2: Logit - ROC Curve")
+lines(x=c(0, 1), y=c(0, 1), col="black", lwd=1, lty=3)
+
+```
+# Fit1: Logit - Predictive Utility 
+```{r logit_performance2, echo=FALSE}
+fit1_auc <- performance(fit1_pred, measure = "auc")
+fit1_gini <- (2*fit1_auc@y.values[[1]] - 1)
+fit1_ks <- round(max(attr(fit1_roc, 'y.value')[[1]] - attr(fit1_roc, 'x.values')[[1]]), 2)
+cat("AUC: ",fit1_auc@y.values[[1]]*100,"\tGini:", fit1_gini*100, "\tKS Statistic: ", fit1_ks*100,  "\n")
+```
+
+
+#======= LOGIT MODEL FOR DATA SUBSETS INDUSTRY=============#
+# Select Industry only (code datasector =2)
+```{r Logit_training_test_4, echo=FALSE}
+data_sub <- data[data$sector == 2, ]
+dim(data_sub)
+str(data_sub)
+```
+
+# Training vs Testing Dataset
+```{r dataset_partition2, echo=FALSE}
+set.seed(1234)
+div <- createDataPartition(y = data_sub$status, p = 0.7, list = F)
+
+#include flags sector e company dimension in the list of variables
+data_sub.train <- data_sub[div,] # 70% here
+data_sub.test <- data_sub[-div,] # rest of the 30% data goes here
+
+PercTable(data_sub$status)
+PercTable(data_sub.train$status)
+PercTable(data_sub.test$status)
+```
+
+#Fit2: Logit for with selected variables
+```{r Logit_training_test_2, echo=FALSE}
+
+fit2 <- glm(status ~ ta_tl + current_ratio + ROI + ROE + turnover_assets1 + 
+    EBITDA_int_paid + EBITA_op_revenues + 
+    DPO + DSO + turnover ,data=data_sub.train,family=binomial())
+summary(fit2)
+```
+
+#Logit prediction and performance
+```{r Logit_training_test_3, echo=FALSE}
+data_sub.test$fit2_score <- predict(fit2,type='response',data_sub.test)
+fit2_pred <- prediction(data_sub.test$fit2_score, data_sub.test$status)
+fit2_roc <- performance(fit2_pred, "tpr", "fpr")
+
+fit2_auc <- performance(fit2_pred, measure = "auc")
+fit2_gini <- (2*fit2_auc@y.values[[1]] - 1)
+fit2_ks <- round(max(attr(fit2_roc, 'y.value')[[1]] - attr(fit2_roc, 'x.values')[[1]]), 2)
+cat("AUC: ",fit2_auc@y.values[[1]]*100,"\tGini:", fit2_gini*100, "\tKS Statistic: ", fit2_ks*100,  "\n")
+
+```

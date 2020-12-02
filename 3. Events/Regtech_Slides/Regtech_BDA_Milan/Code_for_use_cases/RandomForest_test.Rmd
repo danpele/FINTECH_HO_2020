@@ -1,0 +1,107 @@
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(readr)
+library(ggplot2)
+library(plotrix)
+library(rpart)
+library(rpart.plot)
+library(MASS)
+library(caret)  
+library(ROCR)
+library(pROC)
+library(rpart)
+library(DescTools)
+library(partykit)
+library(randomForest)
+library(ggpubr)
+library(rattle)
+
+
+rm(list=ls())
+
+#setwd("C:/Users/brank/Google Drive/Pavia/NETWORK/September 2017/EU Project (code and scripts)/Code/Workshop")
+#final_dataset_smes <- read_csv("final_dataset_smes.csv")
+#setwd("C:/Users/sabrina.stella/Dropbox (modeFinance)/H2020")
+
+data_final_stand <- read_csv("final_dataset_mfi_test.csv")
+data_extra<- data_final_stand[-1]
+
+```
+
+#add new features: sector and comp_size
+```{r training_test_set, echo=FALSE}
+str(data_extra)
+
+data_extra$sector <- as.factor(data_extra$sector)
+data_extra$comp_size <- as.factor(data_extra$comp_size)
+data_extra$status <- as.factor(data_extra$status)
+
+set.seed(1234)
+div <- createDataPartition(y = data_extra$status, p = 0.7, list = F)
+#include flags sector e company dimension in the list of variables
+data_extra.train <- data_extra[div, ] # 70% here
+data_extra.test <- data_extra[-div, ] # rest of the 30% data goes here
+
+
+```
+#==== random forest with selected variables ====
+```{r fit1, echo=FALSE}
+fit1 <- randomForest(status ~ ta_tl + current_ratio + ROI + ROE + turnover_assets1 + 
+       EBITDA_int_paid + EBITA_op_revenues + DPO + DSO + turnover, data=data_extra.train, mtry=2, ntree=1000, 
+                      keep.forest=TRUE, importance=TRUE)
+
+summary(fit1)
+print(fit1)
+
+str(data_extra.train)
+
+
+data_extra.test$fit1_score <- predict(fit1, data_extra.test, type="prob")
+fit1_pred <- prediction(data_extra.test$fit1_score[,2], data_extra.test$status)
+fit1_roc <- performance(fit1_pred, "tpr", "fpr")
+plot(fit1_roc, lwd=1, colorize = TRUE, main = "Fit1: RF - ROC Curve")
+lines(x=c(0, 1), y=c(0, 1), col="black", lwd=1, lty=3)
+
+fit1_auc <- performance(fit1_pred, measure = "auc")
+fit1_gini <- (2*fit1_auc@y.values[[1]] - 1)
+fit1_ks <- round(max(attr(fit1_roc, 'y.value')[[1]] - attr(fit1_roc, 'x.values')[[1]]), 2)
+cat("AUC: ",fit1_auc@y.values[[1]]*100,"\tGini:", fit1_gini*100, "\tKS Statistic: ", fit1_ks*100,  "\n")
+
+```
+
+
+#===== random forest  ======
+#Add two quantitative variable: 
+```{r fit2, echo=FALSE}
+# Training Sample
+
+# RF: Training the model sector subset
+fit2 <- randomForest(status ~ ta_tl + current_ratio + ROI + ROE + turnover_assets1 + 
+   EBITDA_int_paid + EBITA_op_revenues + 
+    DPO + DSO + turnover + sector + comp_size, data=data_extra.train, mtry=2, ntree=1000, 
+                      keep.forest=TRUE, importance=TRUE)
+
+summary(fit2)
+print(fit2)
+
+```
+## Fit2: RF - Prediction
+## Fit2: RF - ROC curve 
+```{r prediction2, echo=FALSE}
+data_extra.test$fit2_score <- predict(fit2, data_extra.test, type="prob")
+fit2_pred <- prediction(data_extra.test$fit2_score[,2], data_extra.test$status)
+fit2_roc <- performance(fit2_pred, "tpr", "fpr")
+plot(fit2_roc, lwd=1, colorize = TRUE, main = "Fit4: RF - ROC Curve")
+lines(x=c(0, 1), y=c(0, 1), col="black", lwd=1, lty=3)
+
+```
+
+# Fit5: RF - Predictive Utility 
+```{r performance2, echo=FALSE}
+fit2_auc <- performance(fit2_pred, measure = "auc")
+fit2_gini <- (2*fit2_auc@y.values[[1]] - 1)
+fit2_ks <- round(max(attr(fit2_roc, 'y.value')[[1]] - attr(fit2_roc, 'x.values')[[1]]), 2)
+cat("AUC: ",fit2_auc@y.values[[1]]*100,"\tGini:", fit2_gini*100, "\tKS Statistic: ", fit2_ks*100,  "\n")
+```
+

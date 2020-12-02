@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1586426219842.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "276354922",
+    "id" : "EBAA8AD0",
+    "lastKnownWriteTime" : 1586439957,
+    "last_content_update" : 1586439957058,
+    "path" : "C:/Users/JP/Desktop/Use Case FRM/main_FRM_JP.R",
+    "project_path" : "main_FRM_JP.R",
+    "properties" : {
+        "cursorPosition" : "227,8",
+        "scrollLine" : "217"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

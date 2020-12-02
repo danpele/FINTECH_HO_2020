@@ -1,0 +1,7 @@
+The quantlet VCS_Cryptos.R is extremely computationally intensive.
+For example, if  M=15 and for the first 6 columns, the time to achieve 
+the results is about 7 days using a 16 Gb RAM computer.
+For this reason, we advise to run the program only for
+ low values of M (M=2) and fewer columns (4), in order to give the audience an idea about the method.
+Please see the paper attached - Yatracos, 2013.
+Also, VCS_univariate.R does the same in the univariate case.

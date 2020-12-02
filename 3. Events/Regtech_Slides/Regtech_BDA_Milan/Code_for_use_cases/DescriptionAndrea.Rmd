@@ -1,0 +1,304 @@
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+# Upload needed libraries
+
+library(DescTools)
+library(ggplot2)
+library(dplyr)
+library(readxl)
+library(readr)
+library(purrr)
+library(Hmisc)
+library(pastecs)
+library(ggpubr)
+library(nortest)
+library(tidyr)
+library(reshape)
+library(reporttools)
+library(naniar)
+library(corrplot)
+library(corrgram)
+library(qgraph)
+library(networkD3)
+
+
+rm(list=ls())
+```
+#Upload dataset
+
+```{r updataset, include=FALSE}
+
+#setwd("E:/Utenti/Andrea/Dropbox (modeFinance)/LAVORO/Andrea/W82-ProgettoUniPavia/Andrea")
+
+final_dataset_smes <- read_csv("final_dataset_smes_and.csv")
+data_complete <- final_dataset_smes[-1]
+
+
+```
+# Specify the type of variables
+
+```{r type, echo=FALSE}
+data_complete[,c(20:25)] <- apply(data_complete[,c(20:25)], 2, function(x) as.factor(as.character(x)))
+
+data <- data_complete[,c(1:19,26, 27)]
+
+```
+# Summary of the dataset 
+The function describe gives the sample size, missing, unique, mean, 5,10,25,50,75,90,95th percentiles, lowest, highest value for all columns in the dataset
+
+```{r summary2, echo=FALSE}
+
+colnames(data)[c(1:15)] = c("leverage", "fin_leverage", "ta_tl","current_ratio", "quick_ratio","assets_coverage","EBIT_interest", "ROI", "ROE","turnover_assets1","turnover_assets2", "interest_paid_weight", "EBITDA_int_paid", "EBITA_op_revenues","EBITA_sales")
+
+describe(data)
+
+```
+
+# We notice DSO DPO problem:
+
+```{r histDPO, echo=FALSE}
+ ggplot(data, aes(DPO)) +
+  geom_histogram(aes(y = stat(count/nrow(data))), colour="black")
+ 
+ggplot(data, aes(DPO)) +
+  geom_histogram( aes(y = stat(count/nrow(data))), colour="black",binwidth = 10 )
+
+ ggplot(data, aes(DPO)) +
+  geom_histogram(aes(y = stat(count/nrow(data))), colour="black",binwidth = 10)+ xlim(-10, 180) 
+  
+ ggplot(data, aes(DSO)) +
+  geom_histogram( aes(y = stat(count/nrow(data))), colour="black")
+
+ggplot(data, aes(DSO)) +
+  geom_histogram(aes(y = stat(count/nrow(data))),colour="black",binwidth = 10)
+
+ ggplot(data, aes(DSO)) +
+  geom_histogram(aes(y = stat(count/nrow(data))),colour="black",binwidth = 10)+ xlim(-10, 180) 
+
+```
+
+# Short format FS 
+issue of short form FS-> small Cos. Let's see what happens if we "remove" companies that file short form financials (i.e. turnover > 8.8 M)
+
+```{r summary3, echo=FALSE}
+data2 <- data[data$comp_size==2,]
+data1 <- data[data$comp_size==1,]
+
+dim(data2)
+dim(data1)
+
+#describe(data2)
+#describe(data1)
+
+
+ ggplot(data2, aes(DPO)) +
+  geom_histogram(aes(y = stat(count/nrow(data))), colour="black",binwidth = 10)+ xlim(-10, 180) 
+ ggplot(data1, aes(DPO)) +
+  geom_histogram(aes(y = stat(count/nrow(data))), colour="black",binwidth = 10)+ xlim(-10, 180) 
+  
+
+ ggplot(data2, aes(DSO)) +
+  geom_histogram(aes(y = stat(count/nrow(data))),colour="black",binwidth = 10)+ xlim(-10, 180) 
+ ggplot(data1, aes(DSO)) +
+  geom_histogram(aes(y = stat(count/nrow(data))),colour="black",binwidth = 10)+ xlim(-10, 180) 
+```
+
+#Size dependency of ratios
+Let us see if there is different behaviour of other rations depending on size
+
+```{r plots, echo=FALSE}
+multiplot <- function(..., plotlist=NULL, file, cols=1, layout=NULL) {
+  require(grid)
+  
+  # Make a list from the ... arguments and plotlist
+  plots <- c(list(...), plotlist)
+  
+  numPlots = length(plots)
+  
+  # If layout is NULL, then use 'cols' to determine layout
+  if (is.null(layout)) {
+    layout <- matrix(seq(1, cols * ceiling(numPlots/cols)),
+                     ncol = cols, nrow = ceiling(numPlots/cols))
+  }
+  
+  if (numPlots==1) {
+    print(plots[[1]])
+    
+  } else {
+    # Set up the page
+    grid.newpage()
+    pushViewport(viewport(layout = grid.layout(nrow(layout), ncol(layout))))
+    
+    # Make each plot, in the correct location
+    for (i in 1:numPlots) {
+      # Get the i,j matrix positions of the regions that contain this subplot
+      matchidx <- as.data.frame(which(layout == i, arr.ind = TRUE))
+      
+      print(plots[[i]], vp = viewport(layout.pos.row = matchidx$row,
+                                      layout.pos.col = matchidx$col))
+    }
+  }
+}
+
+x <-  c(.05,.10, .25, .50, .75, .90)
+dat <- data.frame(
+    qunantiles = x,
+    q_lev_2 = quantile(data2$leverage, x ),
+    q_flev_2 =quantile(data2$fin_leverage, x),
+    q_qr_2 =  quantile(data2$quick_ratio, x),
+    q_cr_2 =  quantile(data2$current_ratio, x),
+    q_roi_2 =  quantile(data2$ROI, x),
+    q_roe_2 =  quantile(data2$ROE, x),
+    q_lev = quantile(data1$leverage, x ),
+    q_flev = quantile(data1$fin_leverage, x),
+    q_qr = quantile(data1$quick_ratio, x),
+    q_cr =  quantile(data1$current_ratio, x),
+    q_roi =  quantile(data1$ROI, x),
+    q_roe =  quantile(data1$ROE, x)
+)
+
+
+ggplot(dat, aes(x= qunantiles, y = leverage, color = variable)) + 
+    geom_point(aes(y = q_lev_2, col = "large_corps")) + 
+    geom_point(aes(y = q_lev, col = "small_corps"))  
+
+ggplot(dat, aes(x= qunantiles, y = ROI, color = variable)) + 
+    geom_point(aes(y = q_roi_2, col =  "large_corps")) + 
+    geom_point(aes(y = q_roi, col = "small_corps"))
+
+ggplot(dat, aes(x= qunantiles, y = ROE, color = variable)) + 
+    geom_point(aes(y = q_roe_2, col = "large_corps")) + 
+    geom_point(aes(y = q_roe, col = "small_corps"))
+
+```
+# Boxplot 
+Another interesting tool to carry on data analysis are Box Plots. Once again 
+knowledge of the facts is mandatory to carry on a reliable analaysis
+
+```{r, out.width='1\\linewidth', fig.asp=0.5, fig.ncol = 1, fig.cap="output",fig.align = "center", echo=FALSE}
+data %>%
+  keep(is.numeric) %>% 
+  boxplot(data, las=2)
+
+```
+
+#We've to keep in mind what we're looking at: ROI has a different range than leverage and both are far different than turnover... You cannot compare everything toghether.
+
+```{r, box_plot_sector, echo=FALSE}
+
+data$sector <- factor(data$sector) 
+ggplot(data)+ geom_boxplot(aes(x = "leverage", y=data$leverage))+
+ geom_boxplot(aes(x = "fin_leverage", y=data$fin_leverage))+ ylim(-5, 15) + theme(axis.title.y = element_blank()) 
+
+
+ggplot(data)+ geom_boxplot(aes(x = "ROI", y=ROI))+
+ geom_boxplot(aes(x = "ROE", y=data$ROE))+ ylim(-0.2, 1) + theme(axis.title.y = element_blank()) 
+
+```
+
+#Box plot come handy to study other dependencies, such as ratios vs sector, or size:
+
+```{r, box_plot_sector_size, echo=FALSE}
+
+data$sector <- factor(data$sector) 
+bp <- ggplot(data, aes(x = sector, y=leverage, fill = sector))+ geom_boxplot()
+bp + facet_grid(. ~  turnover > 8800)+ ylim(-10, 20)
+
+
+bp <- ggplot(data, aes(x = sector, y=current_ratio, fill = sector))+ geom_boxplot()
+bp + facet_grid(. ~  turnover > 8800)+ ylim(0, 3)
+
+
+bp <- ggplot(data, aes(x = sector, y=quick_ratio, fill = sector))+ geom_boxplot()
+bp + facet_grid(. ~  turnover > 8800) + ylim(0, 3) 
+
+
+```
+
+# Analysis Active vs Defaulted
+In the end, the key point when developing a scoring model, is to identify ratio's discriminating capacity...
+
+```{r plots_2, echo=FALSE}
+data$status <- factor(data_complete$status)
+
+ggplot(data, aes(x = status, y=leverage))+ geom_boxplot() + ylim(-10, 20)
+ggplot(data, aes(x = status, y=leverage, fill = sector))+ geom_boxplot() + ylim(-10, 20)
+
+ggplot(data, aes(x = status, y=ROI))+ geom_boxplot() + ylim(-0.2, 0.4)
+ggplot(data, aes(x = status, y=ROI, fill = sector))+ geom_boxplot() + ylim(-0.2, 0.4)
+
+ggplot(data, aes(x = status, y=ROE))+ geom_boxplot() + ylim(-0.2, 0.3)
+ggplot(data, aes(x = status, y=ROE, fill = sector))+ geom_boxplot() + ylim(-0.2, 0.3)
+
+```
+
+# NOTICE
+leverage of defaulted companies is lower than active ones? Weird... let's see what appens:
+
+```{r plots_3, echo=FALSE}
+x <-  c(.1,.2,.3,.4,.5,.6,.7,.8,.9)
+dattt <- data.frame(
+    quantiles_x = x,
+    q_lev_a = quantile(data$leverage[data$status == 0], x ),
+    q_lev_f = quantile(data$leverage[data$status == 1], x ),
+    q_roi_a = quantile(data$ROI[data$status == 0], x ),
+    q_roi_f = quantile(data$ROI[data$status == 1], x ),
+    q_roe_a = quantile(data$ROE[data$status == 0], x ),
+    q_roe_f = quantile(data$ROE[data$status == 1], x )
+)
+
+
+p1 <- ggplot(dattt, aes(x= quantiles_x, y = leverage, color = variable)) + 
+    geom_point(aes(y = q_lev_a, col = "active")) + 
+    geom_point(aes(y = q_lev_f, col = "defaulted")) 
+
+p2 <- ggplot(dattt, aes(x= quantiles_x, y = ROI, color = variable)) + 
+    geom_point(aes(y = q_roi_a, col = "active")) + 
+    geom_point(aes(y = q_roi_f, col = "defaulted")) 
+
+p3 <- ggplot(dattt, aes(x= quantiles_x, y = ROE, color = variable)) + 
+    geom_point(aes(y = q_roe_a, col = "active")) + 
+    geom_point(aes(y = q_roe_f, col = "defaulted")) 
+
+
+multiplot(p1,p2,p3)
+  
+```
+
+# Correlation analysis
+Once identified companies with the highest discriminating capacity, we've to check for correlation: we may have three very "powerful" variables, but if they're totally corrleated, they do not bring value to our model.
+
+```{r plots_4, echo=FALSE}
+
+#dim(data)
+
+data_test <- data[,c(1:18)] %>%
+  keep(is.numeric) 
+correlations <- cor(data_test)
+corrplot(correlations, method="circle")
+
+```
+
+#sector subgroups
+
+```{r plots_5, echo=FALSE}
+
+#§data_test <- data %>%
+ # keep(is.numeric) 
+#correlations <- cor(data_test)
+#corrplot(correlations, method="circle")
+
+data_test <- data2[data2$sector == 4, ] %>%
+  keep(is.numeric)
+correlations <- cor(data_test[,c(4:5)])
+corrplot(correlations, method="number",title= "Construtcions", mar=c(0,0,1,0))
+
+data_test <- data2[data2$sector == 6, ] %>%
+  keep(is.numeric)
+correlations <- cor(data_test[,c(4:5)])
+corrplot(correlations, method="number",title= "Services" , mar=c(0,0,1,0))
+
+
+```
+

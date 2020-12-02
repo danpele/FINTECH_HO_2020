@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1567367856845.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "741823366",
+    "id" : "90B65D5D",
+    "lastKnownWriteTime" : 1567367737,
+    "last_content_update" : 1567367737,
+    "path" : "~/Paolo/New_Use_Cases/2 - General_Use_Cases/AI_MarketRisk_RoboAdvisory/Use Case VIII/main_use_case_8.R",
+    "project_path" : "main_use_case_8.R",
+    "properties" : {
+        "cursorPosition" : "228,104",
+        "scrollLine" : "187"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
