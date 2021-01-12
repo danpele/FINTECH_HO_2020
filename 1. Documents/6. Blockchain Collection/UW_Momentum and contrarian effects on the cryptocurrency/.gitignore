@@ -1,0 +1,11 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+data/
+tmp/
+out/
+other/
+paper/
+pres/

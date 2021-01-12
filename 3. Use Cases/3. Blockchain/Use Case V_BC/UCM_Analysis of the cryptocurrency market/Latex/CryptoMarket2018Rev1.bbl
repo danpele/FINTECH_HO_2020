@@ -1,0 +1,2418 @@
+%% BioMed_Central_Bib_Style_v1.01
+
+\begin{thebibliography}{82}
+% BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
+\ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
+\ifx \binits  \undefined \def \binits#1{#1}\fi
+\ifx \bauthor  \undefined \def \bauthor#1{#1}\fi
+\ifx \batitle  \undefined \def \batitle#1{#1}\fi
+\ifx \bjtitle  \undefined \def \bjtitle#1{#1}\fi
+\ifx \bvolume  \undefined \def \bvolume#1{\textbf{#1}}\fi
+\ifx \byear  \undefined \def \byear#1{#1}\fi
+\ifx \bissue  \undefined \def \bissue#1{#1}\fi
+\ifx \bfpage  \undefined \def \bfpage#1{#1}\fi
+\ifx \blpage  \undefined \def \blpage #1{#1}\fi
+\ifx \burl  \undefined \def \burl#1{\textsf{#1}}\fi
+\ifx \doiurl  \undefined \def \doiurl#1{\textsf{#1}}\fi
+\ifx \betal  \undefined \def \betal{\textit{et al.}}\fi
+\ifx \binstitute  \undefined \def \binstitute#1{#1}\fi
+\ifx \binstitutionaled  \undefined \def \binstitutionaled#1{#1}\fi
+\ifx \bctitle  \undefined \def \bctitle#1{#1}\fi
+\ifx \beditor  \undefined \def \beditor#1{#1}\fi
+\ifx \bpublisher  \undefined \def \bpublisher#1{#1}\fi
+\ifx \bbtitle  \undefined \def \bbtitle#1{#1}\fi
+\ifx \bedition  \undefined \def \bedition#1{#1}\fi
+\ifx \bseriesno  \undefined \def \bseriesno#1{#1}\fi
+\ifx \blocation  \undefined \def \blocation#1{#1}\fi
+\ifx \bsertitle  \undefined \def \bsertitle#1{#1}\fi
+\ifx \bsnm \undefined \def \bsnm#1{#1}\fi
+\ifx \bsuffix \undefined \def \bsuffix#1{#1}\fi
+\ifx \bparticle \undefined \def \bparticle#1{#1}\fi
+\ifx \barticle \undefined \def \barticle#1{#1}\fi
+\ifx \bconfdate \undefined \def \bconfdate #1{#1}\fi
+\ifx \botherref \undefined \def \botherref #1{#1}\fi
+\ifx \url \undefined \def \url#1{\textsf{#1}}\fi
+\ifx \bchapter \undefined \def \bchapter#1{#1}\fi
+\ifx \bbook \undefined \def \bbook#1{#1}\fi
+\ifx \bcomment \undefined \def \bcomment#1{#1}\fi
+\ifx \oauthor \undefined \def \oauthor#1{#1}\fi
+\ifx \citeauthoryear \undefined \def \citeauthoryear#1{#1}\fi
+\ifx \endbibitem  \undefined \def \endbibitem {}\fi
+\ifx \bconflocation  \undefined \def \bconflocation#1{#1}\fi
+\ifx \arxivurl  \undefined \def \arxivurl#1{\textsf{#1}}\fi
+\csname PreBibitemsHook\endcsname
+
+%%% 1
+\bibitem[\protect\citeauthoryear{Acharya}{2011}]{Ghosh2011}
+\begin{barticle}
+\bauthor{\bsnm{Acharya}, \binits{J.G.A.}}:
+\batitle{Cluster ensembles}.
+\bjtitle{WIRES Data Mining and Knowledge discovery}
+\bvolume{1}(\bissue{4}),
+\bfpage{305}--\blpage{315}
+(\byear{2011})
+\end{barticle}
+\endbibitem
+
+%%% 2
+\bibitem[\protect\citeauthoryear{Aggarwal
+  et~al.}{2013}]{DataClusteringAlgorithms2014}
+\begin{bbook}
+\bauthor{\bsnm{Aggarwal}},
+\bauthor{\bsnm{C.}, \binits{C.}},
+\bauthor{\bsnm{Reddy}},
+\bauthor{\bsnm{K.}, \binits{C.}}:
+\bbtitle{Data Clustering: Algorithms and Applications},
+\bedition{1st} edn.
+\bpublisher{Chapman \& Hall/CRC}, \blocation{???}
+(\byear{2013})
+\end{bbook}
+\endbibitem
+
+%%% 3
+\bibitem[\protect\citeauthoryear{Aghabozorgi and
+  Teh}{2014}]{Aghabozorhi2013ThreePhases}
+\begin{barticle}
+\bauthor{\bsnm{Aghabozorgi}, \binits{S.}},
+\bauthor{\bsnm{Teh}, \binits{Y.W.}}:
+\batitle{Stock market co-movement assessment using a three-phase clustering
+  method}.
+\bjtitle{Expert Systems with Applications}
+\bvolume{41}(\bissue{4, Part 1}),
+\bfpage{1301}--\blpage{1314}
+(\byear{2014}).
+doi:\doiurl{10.1016/j.eswa.2013.08.028}
+\end{barticle}
+\endbibitem
+
+%%% 4
+\bibitem[\protect\citeauthoryear{Aghabozorgi
+  et~al.}{2015}]{Aghabozorgi2015TSClust}
+\begin{barticle}
+\bauthor{\bsnm{Aghabozorgi}, \binits{S.}},
+\bauthor{\bsnm{Shirkhorshidi}, \binits{A.S.}},
+\bauthor{\bsnm{Wah}, \binits{T.Y.}}:
+\batitle{Time-series clustering--a decade review}.
+\bjtitle{Information Systems}
+\bvolume{53},
+\bfpage{16}--\blpage{38}
+(\byear{2015})
+\end{barticle}
+\endbibitem
+
+%%% 5
+\bibitem[\protect\citeauthoryear{Agresti}{2018}]{Agresti2018introduction}
+\begin{bbook}
+\bauthor{\bsnm{Agresti}, \binits{A.}}:
+\bbtitle{An Introduction to Categorical Data Analysis}.
+\bpublisher{John Wiley \& Sons}, \blocation{???}
+(\byear{2018})
+\end{bbook}
+\endbibitem
+
+%%% 6
+\bibitem[\protect\citeauthoryear{Arbelaitz et~al.}{2013}]{Arbelaitz2013AnEC}
+\begin{barticle}
+\bauthor{\bsnm{Arbelaitz}, \binits{O.}},
+\bauthor{\bsnm{Gurrutxaga}, \binits{I.}},
+\bauthor{\bsnm{Muguerza}, \binits{J.}},
+\bauthor{\bsnm{P{\'e}rez}, \binits{J.M.}},
+\bauthor{\bsnm{Perona}, \binits{I.}}:
+\batitle{An extensive comparative study of cluster validity indices}.
+\bjtitle{Pattern Recognition}
+\bvolume{46},
+\bfpage{243}--\blpage{256}
+(\byear{2013})
+\end{barticle}
+\endbibitem
+
+%%% 7
+\bibitem[\protect\citeauthoryear{Arroyo and Mat\'e}{2009}]{Arroyo2009}
+\begin{barticle}
+\bauthor{\bsnm{Arroyo}, \binits{J.}},
+\bauthor{\bsnm{Mat\'e}, \binits{C.}}:
+\batitle{Forecasting histogram time series with k-nearest neighbours methods}.
+\bjtitle{International Journal of Forecasting}
+\bvolume{25}(\bissue{1}),
+\bfpage{192}--\blpage{207}
+(\byear{2009}).
+doi:\doiurl{10.1016/j.ijforecast.2008.07.003}
+\end{barticle}
+\endbibitem
+
+%%% 8
+\bibitem[\protect\citeauthoryear{Arroyo et~al.}{2011}]{Arroyo2011}
+\begin{barticle}
+\bauthor{\bsnm{Arroyo}, \binits{J.}},
+\bauthor{\bsnm{Gonz\'alez-Rivera}, \binits{G.}},
+\bauthor{\bsnm{Mat\'e}, \binits{C.}},
+\bauthor{\bsnm{San~Roque}, \binits{A.M.}}:
+\batitle{Smoothing methods for histogram-valued time series: an application to
+  value-at-risk}.
+\bjtitle{Statistical Analysis and Data Mining: The ASA Data Science Journal}
+\bvolume{4}(\bissue{2}),
+\bfpage{216}--\blpage{228}
+(\byear{2011}).
+doi:\doiurl{10.1002/sam.10114}
+\end{barticle}
+\endbibitem
+
+%%% 9
+\bibitem[\protect\citeauthoryear{Bacon}{2008}]{bacon2008practical}
+\begin{bbook}
+\bauthor{\bsnm{Bacon}, \binits{C.R.}}:
+\bbtitle{Practical Portfolio Performance Measurement and Attribution}.
+\bsertitle{The Wiley Finance Series}.
+\bpublisher{John Wiley \& Sons}, \blocation{???}
+(\byear{2008})
+\end{bbook}
+\endbibitem
+
+%%% 10
+\bibitem[\protect\citeauthoryear{Baek and Elbeck}{2015}]{baek2015bitcoins}
+\begin{barticle}
+\bauthor{\bsnm{Baek}, \binits{C.}},
+\bauthor{\bsnm{Elbeck}, \binits{M.}}:
+\batitle{Bitcoins as an investment or speculative vehicle? a first look}.
+\bjtitle{Applied Economics Letters}
+\bvolume{22}(\bissue{1}),
+\bfpage{30}--\blpage{34}
+(\byear{2015})
+\end{barticle}
+\endbibitem
+
+%%% 11
+\bibitem[\protect\citeauthoryear{Banerjee and
+  Dave}{2004}]{Banerjee2004ValidatingCU}
+\begin{barticle}
+\bauthor{\bsnm{Banerjee}, \binits{A.}},
+\bauthor{\bsnm{Dave}, \binits{R.N.}}:
+\batitle{Validating clusters using the hopkins statistic}.
+\bjtitle{2004 IEEE International Conference on Fuzzy Systems (IEEE Cat.
+  No.04CH37542)}
+\bvolume{1},
+\bfpage{149}--\blpage{153}
+(\byear{2004})
+\end{barticle}
+\endbibitem
+
+%%% 12
+\bibitem[\protect\citeauthoryear{Begum et~al.}{2015}]{TADPole2015}
+\begin{bchapter}
+\bauthor{\bsnm{Begum}, \binits{N.}},
+\bauthor{\bsnm{Ulanova}, \binits{L.}},
+\bauthor{\bsnm{Wang}, \binits{J.}},
+\bauthor{\bsnm{Keogh}, \binits{E.}}:
+\bctitle{Accelerating dynamic time warping clustering with a novel admissible
+  pruning strategy}.
+In: \bbtitle{Proceedings of the 21th ACM SIGKDD International Conference on
+  Knowledge Discovery and Data Mining}.
+\bsertitle{KDD ’15},
+pp. \bfpage{49}--\blpage{58}.
+\bpublisher{Association for Computing Machinery},
+\blocation{New York, NY, USA}
+(\byear{2015}).
+doi:\doiurl{10.1145/2783258.2783286}.
+\burl{https://doi.org/10.1145/2783258.2783286}
+\end{bchapter}
+\endbibitem
+
+%%% 13
+\bibitem[\protect\citeauthoryear{Begusic et~al.}{2018}]{BEGUSIC2018400}
+\begin{barticle}
+\bauthor{\bsnm{Begusic}, \binits{S.}},
+\bauthor{\bsnm{Kostanjcar}, \binits{Z.}},
+\bauthor{\bsnm{{Eugene Stanley}}, \binits{H.}},
+\bauthor{\bsnm{Podobnik}, \binits{B.}}:
+\batitle{Scaling properties of extreme price fluctuations in bitcoin markets}.
+\bjtitle{Physica A: Statistical Mechanics and its Applications}
+\bvolume{510},
+\bfpage{400}--\blpage{406}
+(\byear{2018}).
+doi:\doiurl{10.1016/j.physa.2018.06.131}
+\end{barticle}
+\endbibitem
+
+%%% 14
+\bibitem[\protect\citeauthoryear{Berndt and Clifford}{1994}]{DisimilDTW1994}
+\begin{bchapter}
+\bauthor{\bsnm{Berndt}, \binits{D.J.}},
+\bauthor{\bsnm{Clifford}, \binits{J.}}:
+\bctitle{Using dynamic time warping to find patterns in time series.}
+In: \bbtitle{KDD Workshop},
+vol. \bseriesno{10},
+pp. \bfpage{359}--\blpage{370}
+(\byear{1994}).
+\bcomment{Seattle, WA}
+\end{bchapter}
+\endbibitem
+
+%%% 15
+\bibitem[\protect\citeauthoryear{Bojanowski and Edwards}{2016}]{alluvial2016}
+\begin{botherref}
+\oauthor{\bsnm{Bojanowski}, \binits{M.}},
+\oauthor{\bsnm{Edwards}, \binits{R.}}:
+{alluvial}: R Package for Creating Alluvial Diagrams.
+(2016).
+R package version: 0.1-2.
+\url{https://github.com/mbojan/alluvial}
+\end{botherref}
+\endbibitem
+
+%%% 16
+\bibitem[\protect\citeauthoryear{Bonanno et~al.}{2004}]{Bonanno_2004}
+\begin{barticle}
+\bauthor{\bsnm{Bonanno}, \binits{G.}},
+\bauthor{\bsnm{Caldarelli}, \binits{G.}},
+\bauthor{\bsnm{Lillo}, \binits{F.}},
+\bauthor{\bsnm{S.}, \binits{M.}},
+\bauthor{\bsnm{Vandewalle}, \binits{N.}},
+\bauthor{\bsnm{Mantegna}, \binits{R.N.}}:
+\batitle{Networks of equities in financial markets}.
+\bjtitle{The European Physical Journal B - Condensed Matter}
+\bvolume{38}(\bissue{2}),
+\bfpage{363}--\blpage{371}
+(\byear{2004}).
+doi:\doiurl{10.1140/epjb/e2004-00129-6}
+\end{barticle}
+\endbibitem
+
+%%% 17
+\bibitem[\protect\citeauthoryear{Brauneis and
+  Mestel}{2019}]{brauneis2019cryptocurrency}
+\begin{barticle}
+\bauthor{\bsnm{Brauneis}, \binits{A.}},
+\bauthor{\bsnm{Mestel}, \binits{R.}}:
+\batitle{Cryptocurrency-portfolios in a mean-variance framework}.
+\bjtitle{Finance Research Letters}
+\bvolume{28},
+\bfpage{259}--\blpage{264}
+(\byear{2019})
+\end{barticle}
+\endbibitem
+
+%%% 18
+\bibitem[\protect\citeauthoryear{Brida and Risso}{2009}]{BridaRisso2010}
+\begin{barticle}
+\bauthor{\bsnm{Brida}, \binits{J.}},
+\bauthor{\bsnm{Risso}, \binits{W.}}:
+\batitle{Dynamics and structure of the 30 largest north american companies}.
+\bjtitle{Society for Computational Economics}
+\bvolume{35}(\bissue{1}),
+\bfpage{85}--\blpage{99}
+(\byear{2009})
+\end{barticle}
+\endbibitem
+
+%%% 19
+\bibitem[\protect\citeauthoryear{Burniske and
+  Tatar}{2017}]{CryptoAssetsChris2018}
+\begin{bbook}
+\bauthor{\bsnm{Burniske}, \binits{C.}},
+\bauthor{\bsnm{Tatar}, \binits{J.}}:
+\bbtitle{Cryptoassets: The Innovative Investor's Guide to Bitcoin and Beyond}.
+\bpublisher{McGraw-Hill Education}, \blocation{???}
+(\byear{2017}).
+\burl{https://books.google.es/books?id=-5AtDwAAQBAJ}
+\end{bbook}
+\endbibitem
+
+%%% 20
+\bibitem[\protect\citeauthoryear{Chan
+  et~al.}{2017}]{StatisticalAnalysisOfCryptoc}
+\begin{barticle}
+\bauthor{\bsnm{Chan}, \binits{S.}},
+\bauthor{\bsnm{Chu}, \binits{J.}},
+\bauthor{\bsnm{Nadarajah}, \binits{S.}},
+\bauthor{\bsnm{Osterrieder}, \binits{J.}}:
+\batitle{A statistical analysis of cryptocurrencies}.
+\bjtitle{Journal of Risk and Financial Management}
+\bvolume{10}(\bissue{2}),
+\bfpage{12}
+(\byear{2017})
+\end{barticle}
+\endbibitem
+
+%%% 21
+\bibitem[\protect\citeauthoryear{Chaudhuri and Ghosh}{2015}]{Tamal2015}
+\begin{barticle}
+\bauthor{\bsnm{Chaudhuri}, \binits{T.D.}},
+\bauthor{\bsnm{Ghosh}, \binits{I.}}:
+\batitle{Using clustering method to understand {Indian} stock market
+  volatility}.
+\bjtitle{Communications on Applied Electronics}
+\bvolume{2}(\bissue{6}),
+\bfpage{35}--\blpage{44}
+(\byear{2015})
+\end{barticle}
+\endbibitem
+
+%%% 22
+\bibitem[\protect\citeauthoryear{Corbet
+  et~al.}{2018}]{CryptoDynamicRelationships2018}
+\begin{barticle}
+\bauthor{\bsnm{Corbet}, \binits{S.}},
+\bauthor{\bsnm{Meegan}, \binits{A.}},
+\bauthor{\bsnm{Larkin}, \binits{C.J.}},
+\bauthor{\bsnm{Lucey}, \binits{B.}},
+\bauthor{\bsnm{Yarovaya}, \binits{L.}}:
+\batitle{Exploring the dynamic relationships between cryptocurrencies and other
+  financial assets}.
+\bjtitle{Economic Letters}
+\bvolume{-}(\bissue{165}),
+\bfpage{28}--\blpage{34}
+(\byear{2018})
+\end{barticle}
+\endbibitem
+
+%%% 23
+\bibitem[\protect\citeauthoryear{Corbet
+  et~al.}{2019}]{SystematicAnalysisCrypto2018}
+\begin{barticle}
+\bauthor{\bsnm{Corbet}, \binits{S.}},
+\bauthor{\bsnm{Lucey}, \binits{B.}},
+\bauthor{\bsnm{Urquhart}, \binits{A.}},
+\bauthor{\bsnm{Yarovaya}, \binits{L.}}:
+\batitle{Cryptocurrencies as a financial asset: A systematic analysis}.
+\bjtitle{International Review of Financial Analysis}
+\bvolume{62},
+\bfpage{182}--\blpage{199}
+(\byear{2019})
+\end{barticle}
+\endbibitem
+
+%%% 24
+\bibitem[\protect\citeauthoryear{Drozdz et~al.}{2019}]{Dro_d_2019}
+\begin{barticle}
+\bauthor{\bsnm{Drozdz}, \binits{S.}},
+\bauthor{\bsnm{Minati}, \binits{L.}},
+\bauthor{\bsnm{Oswiecimka}, \binits{P.}},
+\bauthor{\bsnm{Stanuszek}, \binits{M.}},
+\bauthor{\bsnm{Watorek}, \binits{M.}}:
+\batitle{Signatures of the crypto-currency market decoupling from the forex}.
+\bjtitle{Future Internet}
+\bvolume{11}(\bissue{7}),
+\bfpage{154}
+(\byear{2019}).
+doi:\doiurl{10.3390/fi11070154}
+\end{barticle}
+\endbibitem
+
+%%% 25
+\bibitem[\protect\citeauthoryear{D'Urso et~al.}{2016}]{PierpaoloDUrso2016}
+\begin{barticle}
+\bauthor{\bsnm{D'Urso}, \binits{P.}},
+\bauthor{\bsnm{De~Giovanni}, \binits{L.}},
+\bauthor{\bsnm{Massari}, \binits{R.}}:
+\batitle{Garch-based robust clustering of time series}.
+\bjtitle{Fuzzy Sets Syst.}
+\bvolume{305}(\bissue{C}),
+\bfpage{1}--\blpage{28}
+(\byear{2016}).
+doi:\doiurl{10.1016/j.fss.2016.01.010}
+\end{barticle}
+\endbibitem
+
+%%% 26
+\bibitem[\protect\citeauthoryear{D’Urso et~al.}{2020}]{PierpaoloDUrso2020}
+\begin{barticle}
+\bauthor{\bsnm{D’Urso}, \binits{P.}},
+\bauthor{\bsnm{Giovanni}, \binits{L.D.}},
+\bauthor{\bsnm{Massari}, \binits{R.}},
+\bauthor{\bsnm{D’Ecclesia}, \binits{R.L.}},
+\bauthor{\bsnm{Maharaj}, \binits{E.A.}}:
+\batitle{Cepstral-based clustering of financial time series}.
+\bjtitle{Expert Systems with Applications}
+\bvolume{161},
+\bfpage{113705}
+(\byear{2020}).
+doi:\doiurl{10.1016/j.eswa.2020.113705}
+\end{barticle}
+\endbibitem
+
+%%% 27
+\bibitem[\protect\citeauthoryear{Fisher}{1922}]{ContingencyTableFisher1922}
+\begin{barticle}
+\bauthor{\bsnm{Fisher}, \binits{R.A.}}:
+\batitle{On the interpretation on teh x2 from contingency tables and the
+  calculation of the p}.
+\bjtitle{Royal Statistical Society}
+\bvolume{85}(\bissue{1}),
+\bfpage{87}--\blpage{94}
+(\byear{1922})
+\end{barticle}
+\endbibitem
+
+%%% 28
+\bibitem[\protect\citeauthoryear{Gillespie}{2015}]{poweRlaw}
+\begin{barticle}
+\bauthor{\bsnm{Gillespie}, \binits{C.S.}}:
+\batitle{Fitting heavy tailed distributions: The {poweRlaw} package}.
+\bjtitle{Journal of Statistical Software}
+\bvolume{64}(\bissue{2}),
+\bfpage{1}--\blpage{16}
+(\byear{2015})
+\end{barticle}
+\endbibitem
+
+%%% 29
+\bibitem[\protect\citeauthoryear{Gonz\'alez-Rivera and
+  Arroyo}{2012}]{GONZALEZRIVERA2012}
+\begin{barticle}
+\bauthor{\bsnm{Gonz\'alez-Rivera}, \binits{G.}},
+\bauthor{\bsnm{Arroyo}, \binits{J.}}:
+\batitle{Time series modeling of histogram-valued data: The daily histogram
+  time series of s\&p500 intradaily returns}.
+\bjtitle{International Journal of Forecasting}
+\bvolume{28}(\bissue{1}),
+\bfpage{20}--\blpage{33}
+(\byear{2012}).
+doi:\doiurl{10.1016/j.ijforecast.2011.02.007}
+\end{barticle}
+\endbibitem
+
+%%% 30
+\bibitem[\protect\citeauthoryear{Hartigan and Wong}{1979}]{HartiganWong1979}
+\begin{barticle}
+\bauthor{\bsnm{Hartigan}, \binits{J.A.}},
+\bauthor{\bsnm{Wong}, \binits{M.A.}}:
+\batitle{Algorithm as 136: A k-means clustering algorithm}.
+\bjtitle{Journal of the Royal Statistical Society. Series C (Applied
+  Statistics)}
+\bvolume{28}(\bissue{1}),
+\bfpage{100}--\blpage{108}
+(\byear{1979})
+\end{barticle}
+\endbibitem
+
+%%% 31
+\bibitem[\protect\citeauthoryear{Henning
+  et~al.}{2016}]{ClusterAnalysisHandBookCRCPress2016}
+\begin{bbook}
+\bauthor{\bsnm{Henning}, \binits{C.}},
+\bauthor{\bsnm{Meila}, \binits{M.}},
+\bauthor{\bsnm{Murtagh}, \binits{F.}},
+\bauthor{\bsnm{Rocci}, \binits{R.}}:
+\bbtitle{Handbook of Cluster Analysis}.
+\bpublisher{CRC Press}, \blocation{???}
+(\byear{2016})
+\end{bbook}
+\endbibitem
+
+%%% 32
+\bibitem[\protect\citeauthoryear{Hornik}{2005}]{Clue2019}
+\begin{botherref}
+\oauthor{\bsnm{Hornik}, \binits{K.}}:
+A {CLUE} for {CLUster Ensembles}.
+Journal of Statistical Software
+\textbf{14}(12)
+(2005).
+doi:\doiurl{10.18637/jss.v014.i12}
+\end{botherref}
+\endbibitem
+
+%%% 33
+\bibitem[\protect\citeauthoryear{Hornik}{2019}]{Clue2019Rpackage}
+\begin{botherref}
+\oauthor{\bsnm{Hornik}, \binits{K.}}:
+Clue: Cluster Ensembles.
+(2019).
+R package version 0.3-57.
+\url{https://CRAN.R-project.org/package=clue}
+\end{botherref}
+\endbibitem
+
+%%% 34
+\bibitem[\protect\citeauthoryear{Hu et~al.}{2019}]{Hu2018CryptocurrenciesSF}
+\begin{barticle}
+\bauthor{\bsnm{Hu}, \binits{A.S.}},
+\bauthor{\bsnm{Parlour}, \binits{C.A.}},
+\bauthor{\bsnm{Rajan}, \binits{U.}}:
+\batitle{Cryptocurrencies: Stylized facts on a new investible instrument}.
+\bjtitle{Financial Management}
+\bvolume{48}(\bissue{4}),
+\bfpage{1049}--\blpage{1068}
+(\byear{2019})
+\end{barticle}
+\endbibitem
+
+%%% 35
+\bibitem[\protect\citeauthoryear{Irpino}{2019}]{HistDAWass}
+\begin{barticle}
+\bauthor{\bsnm{Irpino}, \binits{A.}}:
+\batitle{Histogram-value data analysis}.
+\bjtitle{R library}
+\bvolume{-}(\bissue{-}),
+(\byear{2019})
+\end{barticle}
+\endbibitem
+
+%%% 36
+\bibitem[\protect\citeauthoryear{Irpino and Verde}{2006}]{Irpino2006}
+\begin{bchapter}
+\bauthor{\bsnm{Irpino}, \binits{A.}},
+\bauthor{\bsnm{Verde}, \binits{R.}}:
+\bctitle{Dynamic clustering of histograms using wasserstein metric}.
+In: \bbtitle{COMPSTAT 2006, Proceedings in Computational Statistics},
+pp. \bfpage{869}--\blpage{876}.
+\bpublisher{Physica-Verlag},
+\blocation{Heidelberg}
+(\byear{2006})
+\end{bchapter}
+\endbibitem
+
+%%% 37
+\bibitem[\protect\citeauthoryear{Irpino}{2016}]{Irpino2016}
+\begin{botherref}
+\oauthor{\bsnm{Irpino}, \binits{A.}}:
+HistDAWass Package: An R Tool for Histograms-values Data.
+(2016).
+R package version 1.0.4.
+\url{https://cran.r-project.org/package=HistDAWass}
+\end{botherref}
+\endbibitem
+
+%%% 38
+\bibitem[\protect\citeauthoryear{Irpino and Verde}{2015}]{Irpino2015BasicSF}
+\begin{barticle}
+\bauthor{\bsnm{Irpino}, \binits{A.}},
+\bauthor{\bsnm{Verde}, \binits{R.}}:
+\batitle{Basic statistics for distributional symbolic variables: a new
+  metric-based approach}.
+\bjtitle{Advances in Data Analysis and Classification}
+\bvolume{9},
+\bfpage{143}--\blpage{175}
+(\byear{2015})
+\end{barticle}
+\endbibitem
+
+%%% 39
+\bibitem[\protect\citeauthoryear{Irpino et~al.}{2014}]{HistogramClust2013}
+\begin{barticle}
+\bauthor{\bsnm{Irpino}, \binits{A.}},
+\bauthor{\bsnm{Verde}, \binits{R.}},
+\bauthor{\bsnm{De~Carvalho}, \binits{F.d.A.T.}}:
+\batitle{Dynamic clustering of histogram data based on adaptive squared
+  {W}asserstein distances}.
+\bjtitle{Expert Systems with Applications}
+\bvolume{41}(\bissue{7}),
+\bfpage{3351}--\blpage{3366}
+(\byear{2014}).
+doi:\doiurl{10.1016/j.eswa.2013.12.001}
+\end{barticle}
+\endbibitem
+
+%%% 40
+\bibitem[\protect\citeauthoryear{Kern et~al.}{2017}]{kern2017interactive}
+\begin{barticle}
+\bauthor{\bsnm{Kern}, \binits{M.}},
+\bauthor{\bsnm{Lex}, \binits{A.}},
+\bauthor{\bsnm{Gehlenborg}, \binits{N.}},
+\bauthor{\bsnm{Johnson}, \binits{C.R.}}:
+\batitle{Interactive visual exploration and refinement of cluster assignments}.
+\bjtitle{BMC bioinformatics}
+\bvolume{18}(\bissue{1}),
+\bfpage{1}--\blpage{13}
+(\byear{2017})
+\end{barticle}
+\endbibitem
+
+%%% 41
+\bibitem[\protect\citeauthoryear{Lemire}{2008}]{Lemire2008}
+\begin{botherref}
+\oauthor{\bsnm{Lemire}, \binits{D.}}:
+Faster retrieval with a two-pass dynamic-time-warping lower bound.
+CoRR
+\textbf{abs/0811.3301}
+(2008).
+\arxivurl{0811.3301}
+\end{botherref}
+\endbibitem
+
+%%% 42
+\bibitem[\protect\citeauthoryear{Letra}{2016}]{CryptoCurrencyDrives}
+\begin{botherref}
+\oauthor{\bsnm{Letra}, \binits{I.J.S.}}:
+What drives cryptocurrency value? a volatility and predictability analysis.
+PhD thesis,
+Instituto Superior de Economia e Gest{\~a}o
+(2016)
+\end{botherref}
+\endbibitem
+
+%%% 43
+\bibitem[\protect\citeauthoryear{Liao}{2007}]{Liao2007MarketClustering}
+\begin{barticle}
+\bauthor{\bsnm{Liao}, \binits{S.-H.}}:
+\batitle{Mining stock category association and cluster on {Taiwan} stock
+  market}.
+\bjtitle{Expert Systems with Applications}
+\bvolume{35},
+\bfpage{19}--\blpage{29}
+(\byear{2007})
+\end{barticle}
+\endbibitem
+
+%%% 44
+\bibitem[\protect\citeauthoryear{Liao and
+  Chou}{2013}]{Liao2013TaiwanChinaStocks5}
+\begin{barticle}
+\bauthor{\bsnm{Liao}, \binits{S.-H.}},
+\bauthor{\bsnm{Chou}, \binits{S.-Y.}}:
+\batitle{Data mining investigation of co-movements on the {Taiwan} and {China}
+  stock markets for future investment portfolio}.
+\bjtitle{Expert Systems with Applications}
+\bvolume{40}(\bissue{5}),
+\bfpage{1542}--\blpage{1554}
+(\byear{2013}).
+doi:\doiurl{10.1016/j.eswa.2012.08.075}
+\end{barticle}
+\endbibitem
+
+%%% 45
+\bibitem[\protect\citeauthoryear{Liao}{2005}]{Liao2005Clustering}
+\begin{barticle}
+\bauthor{\bsnm{Liao}, \binits{T.W.}}:
+\batitle{Clustering of time series data-a survey}.
+\bjtitle{The journal of the pattern recognition society}
+\bvolume{1}(\bissue{38}),
+\bfpage{1857}--\blpage{1874}
+(\byear{2005})
+\end{barticle}
+\endbibitem
+
+%%% 46
+\bibitem[\protect\citeauthoryear{Liu}{2019}]{Liu2019PortfolioDA}
+\begin{barticle}
+\bauthor{\bsnm{Liu}, \binits{W.}}:
+\batitle{Portfolio diversification across cryptocurrencies}.
+\bjtitle{Finance Research Letters}
+\bvolume{29},
+\bfpage{200}--\blpage{205}
+(\byear{2019})
+\end{barticle}
+\endbibitem
+
+%%% 47
+\bibitem[\protect\citeauthoryear{L'Yi et~al.}{2015}]{l2015xclusim}
+\begin{barticle}
+\bauthor{\bsnm{L'Yi}, \binits{S.}},
+\bauthor{\bsnm{Ko}, \binits{B.}},
+\bauthor{\bsnm{Shin}, \binits{D.}},
+\bauthor{\bsnm{Cho}, \binits{Y.-J.}},
+\bauthor{\bsnm{Lee}, \binits{J.}},
+\bauthor{\bsnm{Kim}, \binits{B.}},
+\bauthor{\bsnm{Seo}, \binits{J.}}:
+\batitle{{XCluSim}: a visual analytics tool for interactively comparing
+  multiple clustering results of bioinformatics data}.
+\bjtitle{BMC bioinformatics}
+\bvolume{16}(\bissue{S11}),
+\bfpage{5}
+(\byear{2015})
+\end{barticle}
+\endbibitem
+
+%%% 48
+\bibitem[\protect\citeauthoryear{MacQueen}{1967}]{KmeansMacQueen1967}
+\begin{barticle}
+\bauthor{\bsnm{MacQueen}, \binits{J.}}:
+\batitle{Some methods for classification and analysis of multivariate
+  observations}.
+\bjtitle{Proceedings of the Fifth Berkeley Sympposium on Mathematical
+  Statistics and Probability}
+\bvolume{1}(\bissue{-}),
+\bfpage{281}--\blpage{297}
+(\byear{1967})
+\end{barticle}
+\endbibitem
+
+%%% 49
+\bibitem[\protect\citeauthoryear{Mallikarjuna and
+  Rao}{2019}]{MMallikarjuna2019}
+\begin{barticle}
+\bauthor{\bsnm{Mallikarjuna}, \binits{M.}},
+\bauthor{\bsnm{Rao}, \binits{R.P.}}:
+\batitle{{Evaluation of forecasting methods from selected stock market
+  returns}}.
+\bjtitle{Financial Innovation}
+\bvolume{5}(\bissue{1}),
+\bfpage{1}--\blpage{16}
+(\byear{2019}).
+doi:\doiurl{10.1186/s40854-019-0157-x}
+\end{barticle}
+\endbibitem
+
+%%% 50
+\bibitem[\protect\citeauthoryear{Mantegna}{1999}]{HierarchicalStructureFinancialMK1999}
+\begin{barticle}
+\bauthor{\bsnm{Mantegna}, \binits{R.}}:
+\batitle{Hierarchical structure in financial markets}.
+\bjtitle{European Physical Journal B}
+\bvolume{11}(\bissue{1}),
+\bfpage{193}--\blpage{197}
+(\byear{1999})
+\end{barticle}
+\endbibitem
+
+%%% 51
+\bibitem[\protect\citeauthoryear{Marti et~al.}{2017}]{Gautier2017}
+\begin{botherref}
+\oauthor{\bsnm{Marti}, \binits{G.}},
+\oauthor{\bsnm{Nielsen}, \binits{F.}},
+\oauthor{\bsnm{Bi'nkowski}, \binits{M.}},
+\oauthor{\bsnm{Donnat}, \binits{P.}}:
+{A review of two decades of correlations, hierarchies, networks and clustering
+  in financial markets}.
+Papers 1703.00485,
+arXiv.org
+(March 2017).
+\url{https://arxiv.org/abs/1703.00485}
+\end{botherref}
+\endbibitem
+
+%%% 52
+\bibitem[\protect\citeauthoryear{Mehta and Patel}{1983}]{Mehta1983ANA}
+\begin{barticle}
+\bauthor{\bsnm{Mehta}, \binits{C.R.}},
+\bauthor{\bsnm{Patel}, \binits{N.R.}}:
+\batitle{A network algorithm for performing fisher exact test in rxc
+  contingency table}.
+\bjtitle{Journal of the American Statistical Association}
+\bvolume{78}(\bissue{382}),
+\bfpage{427}--\blpage{434}
+(\byear{1983})
+\end{barticle}
+\endbibitem
+
+%%% 53
+\bibitem[\protect\citeauthoryear{Mehta and Patel}{1996}]{mehta1996exact}
+\begin{barticle}
+\bauthor{\bsnm{Mehta}, \binits{C.R.}},
+\bauthor{\bsnm{Patel}, \binits{N.R.}}:
+\batitle{Exact tests™}.
+\bjtitle{SPSS exact tests}
+\bvolume{7},
+\bfpage{12}
+(\byear{1996})
+\end{barticle}
+\endbibitem
+
+%%% 54
+\bibitem[\protect\citeauthoryear{Meyer et~al.}{2006}]{vcd_assoc2}
+\begin{barticle}
+\bauthor{\bsnm{Meyer}, \binits{D.}},
+\bauthor{\bsnm{Zeileis}, \binits{A.}},
+\bauthor{\bsnm{Hornik}, \binits{K.}}:
+\batitle{The strucplot framework: Visualizing multi-way contingency tables with
+  vcd}.
+\bjtitle{Journal of Statistical Software}
+\bvolume{17}(\bissue{3}),
+\bfpage{1}--\blpage{48}
+(\byear{2006})
+\end{barticle}
+\endbibitem
+
+%%% 55
+\bibitem[\protect\citeauthoryear{Meyer et~al.}{2020}]{vcd_assoc1}
+\begin{botherref}
+\oauthor{\bsnm{Meyer}, \binits{D.}},
+\oauthor{\bsnm{Zeileis}, \binits{A.}},
+\oauthor{\bsnm{Hornik}, \binits{K.}}:
+Vcd: Visualizing Categorical Data.
+(2020).
+R package version 1.4-7
+\end{botherref}
+\endbibitem
+
+%%% 56
+\bibitem[\protect\citeauthoryear{Mizuno et~al.}{2006}]{Mizuno_2006}
+\begin{barticle}
+\bauthor{\bsnm{Mizuno}, \binits{T.}},
+\bauthor{\bsnm{Takayasu}, \binits{H.}},
+\bauthor{\bsnm{Takayasu}, \binits{M.}}:
+\batitle{Correlation networks among currencies}.
+\bjtitle{Physica A: Statistical Mechanics and its Applications}
+\bvolume{364},
+\bfpage{336}--\blpage{342}
+(\byear{2006}).
+doi:\doiurl{10.1016/j.physa.2005.08.079}
+\end{barticle}
+\endbibitem
+
+%%% 57
+\bibitem[\protect\citeauthoryear{Nakamoto}{2009}]{Nakamoto2008}
+\begin{botherref}
+\oauthor{\bsnm{Nakamoto}, \binits{S.}}:
+Bitcoin: A peer-to-peer electronic cash system
+(2009).
+\url{http://www.bitcoin.org/bitcoin.pdf}
+\end{botherref}
+\endbibitem
+
+%%% 58
+\bibitem[\protect\citeauthoryear{Nanda et~al.}{2010}]{Nanda2010ClusteringIS}
+\begin{barticle}
+\bauthor{\bsnm{Nanda}, \binits{S.R.}},
+\bauthor{\bsnm{Mahanty}, \binits{B.}},
+\bauthor{\bsnm{Tiwari}, \binits{M.K.}}:
+\batitle{Clustering {Indian} stock market data for portfolio management}.
+\bjtitle{Expert System with Applications}
+\bvolume{37},
+\bfpage{8793}--\blpage{8798}
+(\byear{2010})
+\end{barticle}
+\endbibitem
+
+%%% 59
+\bibitem[\protect\citeauthoryear{Newman}{2005}]{Newman2005power}
+\begin{barticle}
+\bauthor{\bsnm{Newman}, \binits{M.}}:
+\batitle{Power laws, pareto distributions and zipf's law}.
+\bjtitle{Contemporary Physics}
+\bvolume{46}(\bissue{5}),
+\bfpage{323}--\blpage{351}
+(\byear{2005}).
+doi:\doiurl{10.1080/00107510500052444}.
+\arxivurl{http://www.tandfonline.com/doi/pdf/10.1080/00107510500052444}
+\end{barticle}
+\endbibitem
+
+%%% 60
+\bibitem[\protect\citeauthoryear{Noirhomme-Fraiture and
+  Brito}{2011}]{NoirhommeBrito2011}
+\begin{barticle}
+\bauthor{\bsnm{Noirhomme-Fraiture}, \binits{M.}},
+\bauthor{\bsnm{Brito}, \binits{P.}}:
+\batitle{Far beyond the classical data models: symbolic data analysis}.
+\bjtitle{Statistical Analysis and Data Mining: The ASA Data Science Journal}
+\bvolume{4}(\bissue{2}),
+\bfpage{157}--\blpage{170}
+(\byear{2011}).
+doi:\doiurl{10.1002/sam.10112}
+\end{barticle}
+\endbibitem
+
+%%% 61
+\bibitem[\protect\citeauthoryear{Onnela et~al.}{2003}]{Onnela2_2003}
+\begin{botherref}
+\oauthor{\bsnm{Onnela}, \binits{J.-P.}},
+\oauthor{\bsnm{Chakraborti}, \binits{A.}},
+\oauthor{\bsnm{Kaski}, \binits{K.}},
+\oauthor{\bsnm{Kertész}, \binits{J.}},
+\oauthor{\bsnm{Kanto}, \binits{A.}}:
+Dynamics of market correlations: Taxonomy and portfolio analysis.
+Physical Review E
+\textbf{68}(5)
+(2003).
+doi:\doiurl{10.1103/physreve.68.056110}
+\end{botherref}
+\endbibitem
+
+%%% 62
+\bibitem[\protect\citeauthoryear{Pele et~al.}{2020}]{Pele2020}
+\begin{botherref}
+\oauthor{\bsnm{Pele}, \binits{D.}},
+\oauthor{\bsnm{Wesselhöfft}, \binits{N.}},
+\oauthor{\bsnm{Härdle}, \binits{W.}},
+\oauthor{\bsnm{Kolossiatis}, \binits{M.}},
+\oauthor{\bsnm{Yannis}, \binits{Y.}}:
+A Statistical Classification of Cryptocurrencies
+(2020).
+\url{https://ssrn.com/abstract=3548462}
+\end{botherref}
+\endbibitem
+
+%%% 63
+\bibitem[\protect\citeauthoryear{Peterson et~al.}{2018}]{PerformanceAnalytics}
+\begin{botherref}
+\oauthor{\bsnm{Peterson}, \binits{B.G.}},
+\oauthor{\bsnm{Carl}, \binits{P.}},
+\oauthor{\bsnm{Boudt}, \binits{K.}},
+\oauthor{\bsnm{Bennet}, \binits{R.}},
+\oauthor{\bsnm{Ulrich}, \binits{J.}},
+\oauthor{\bsnm{Zivot}, \binits{E.}},
+\oauthor{\bsnm{Lestel}, \binits{M.}},
+\oauthor{\bsnm{Balkissoon}, \binits{K.}},
+\oauthor{\bsnm{Wuertz}, \binits{D.}}:
+PerformanceAnlytics: Econometric Tools for Performance and Risk Analysis.
+(2018).
+R package version 1.5.2.
+\url{https://cran.r-project.org/package=PerformanceAnalytics}
+\end{botherref}
+\endbibitem
+
+%%% 64
+\bibitem[\protect\citeauthoryear{Pierpaolo et~al.}{2013}]{PierpaoloDUrso2013}
+\begin{barticle}
+\bauthor{\bsnm{Pierpaolo}, \binits{D.}},
+\bauthor{\bsnm{Cappelli}, \binits{C.}},
+\bauthor{\bsnm{Di~Lallo}, \binits{D.}},
+\bauthor{\bsnm{Massari}, \binits{R.}}:
+\batitle{Clustering of financial time series}.
+\bjtitle{Physica A: Statistical Mechanics and its Applications}
+\bvolume{392}(\bissue{9}),
+\bfpage{2114}--\blpage{2129}
+(\byear{2013})
+\end{barticle}
+\endbibitem
+
+%%% 65
+\bibitem[\protect\citeauthoryear{Platanakis
+  et~al.}{2018}]{platanakis2018optimal}
+\begin{barticle}
+\bauthor{\bsnm{Platanakis}, \binits{E.}},
+\bauthor{\bsnm{Sutcliffe}, \binits{C.}},
+\bauthor{\bsnm{Urquhart}, \binits{A.}}:
+\batitle{Optimal vs na{\"\i}ve diversification in cryptocurrencies}.
+\bjtitle{Economics Letters}
+\bvolume{171},
+\bfpage{93}--\blpage{96}
+(\byear{2018})
+\end{barticle}
+\endbibitem
+
+%%% 66
+\bibitem[\protect\citeauthoryear{{R Core Team}}{2013}]{R_opensourcelanguage}
+\begin{bbook}
+\bauthor{\bsnm{{R Core Team}}}:
+\bbtitle{R: A Language and Environment for Statistical Computing}.
+\bpublisher{R Foundation for Statistical Computing},
+\blocation{Vienna, Austria}
+(\byear{2013}).
+\bcomment{R Foundation for Statistical Computing}.
+\burl{http://www.R-project.org/}
+\end{bbook}
+\endbibitem
+
+%%% 67
+\bibitem[\protect\citeauthoryear{Rani and Sikka}{2012}]{Rani2012RecentTO}
+\begin{botherref}
+\oauthor{\bsnm{Rani}, \binits{S.}},
+\oauthor{\bsnm{Sikka}, \binits{G.}}:
+Recent techniques of clustering of time series data: a survey.
+International Journal of Computer Applications
+\textbf{52}(15)
+(2012)
+\end{botherref}
+\endbibitem
+
+%%% 68
+\bibitem[\protect\citeauthoryear{Rodriguez and Laio}{2014}]{Rodriguez1492}
+\begin{barticle}
+\bauthor{\bsnm{Rodriguez}, \binits{A.}},
+\bauthor{\bsnm{Laio}, \binits{A.}}:
+\batitle{Clustering by fast search and find of density peaks}.
+\bjtitle{Science}
+\bvolume{344}(\bissue{6191}),
+\bfpage{1492}--\blpage{1496}
+(\byear{2014}).
+doi:\doiurl{10.1126/science.1242072}.
+\arxivurl{https://science.sciencemag.org/content/344/6191/1492.full.pdf}
+\end{barticle}
+\endbibitem
+
+%%% 69
+\bibitem[\protect\citeauthoryear{Rosvall and
+  Bergstrom}{2010}]{Rosvall2010MappingCI}
+\begin{botherref}
+\oauthor{\bsnm{Rosvall}, \binits{M.}},
+\oauthor{\bsnm{Bergstrom}, \binits{C.T.}}:
+Mapping change in large networks.
+PLoS ONE
+\textbf{5}
+(2010)
+\end{botherref}
+\endbibitem
+
+%%% 70
+\bibitem[\protect\citeauthoryear{Sarda-Espinosa}{2019}]{DTWCLUST}
+\begin{botherref}
+\oauthor{\bsnm{Sarda-Espinosa}, \binits{A.}}:
+Dtwclust: Time Series Clustering Along with Optimizations for the Dynamic Time
+  Warping Distance.
+(2019).
+R package version 5.5.6.
+\url{https://CRAN.R-project.org/package=dtwclust}
+\end{botherref}
+\endbibitem
+
+%%% 71
+\bibitem[\protect\citeauthoryear{Sard{\'a}-Espinosa}{2019}]{DTWCLUST2}
+\begin{barticle}
+\bauthor{\bsnm{Sard{\'a}-Espinosa}, \binits{A.}}:
+\batitle{Time-series clustering in {R} using the {dtwclust} package}.
+\bjtitle{The R Journal}
+\bvolume{11}(\bissue{1}),
+\bfpage{22}--\blpage{43}
+(\byear{2019})
+\end{barticle}
+\endbibitem
+
+%%% 72
+\bibitem[\protect\citeauthoryear{Sigaki
+  et~al.}{2019}]{HigorSigakiClusteringPattersCrypto2018}
+\begin{bchapter}
+\bauthor{\bsnm{Sigaki}, \binits{H.Y.D.}},
+\bauthor{\bsnm{Perc}, \binits{M.}},
+\bauthor{\bsnm{Ribeiro}, \binits{H.V.}}:
+\bctitle{Clustering patterns in efficiency and the coming-of-age of the
+  cryptocurrency market}.
+In: \bbtitle{Scientific Reports}
+(\byear{2019})
+\end{bchapter}
+\endbibitem
+
+%%% 73
+\bibitem[\protect\citeauthoryear{Song et~al.}{2019}]{Song2019}
+\begin{botherref}
+\oauthor{\bsnm{Song}, \binits{J.Y.}},
+\oauthor{\bsnm{Chang}, \binits{W.}},
+\oauthor{\bsnm{Song}, \binits{J.W.}}:
+Cluster analysis on the structure of the cryptocurrency market via
+  {B}itcoin-{E}thereum filtering.
+Physica A-Statistical Mechanics and its Applications
+\textbf{527}
+(2019)
+\end{botherref}
+\endbibitem
+
+%%% 74
+\bibitem[\protect\citeauthoryear{Stosic et~al.}{2018}]{Stosic2018CollectiveBO}
+\begin{barticle}
+\bauthor{\bsnm{Stosic}, \binits{D.}},
+\bauthor{\bsnm{Stosic}, \binits{D.}},
+\bauthor{\bsnm{Ludermir}, \binits{T.B.}},
+\bauthor{\bsnm{Stosic}, \binits{T.}}:
+\batitle{Collective behavior of cryptocurrency price changes}.
+\bjtitle{Physica A: Statistical Mechanics and its Applications}
+\bvolume{507},
+\bfpage{499}--\blpage{509}
+(\byear{2018})
+\end{barticle}
+\endbibitem
+
+%%% 75
+\bibitem[\protect\citeauthoryear{Watorek et~al.}{2020}]{WATOREK2020}
+\begin{barticle}
+\bauthor{\bsnm{Watorek}, \binits{M.}},
+\bauthor{\bsnm{Drozdz}, \binits{S.}},
+\bauthor{\bsnm{Kwapien}, \binits{J.}},
+\bauthor{\bsnm{Minati}, \binits{L.}},
+\bauthor{\bsnm{Oswiecimka}, \binits{P.}},
+\bauthor{\bsnm{Stanuszek}, \binits{M.}}:
+\batitle{Multiscale characteristics of the emerging global cryptocurrency
+  market}.
+\bjtitle{Physics Reports}
+(\byear{2020}).
+doi:\doiurl{10.1016/j.physrep.2020.10.005}
+\end{barticle}
+\endbibitem
+
+%%% 76
+\bibitem[\protect\citeauthoryear{Wu et~al.}{2008}]{Wu2008Top10Alg}
+\begin{barticle}
+\bauthor{\bsnm{Wu}, \binits{X.}},
+\bauthor{\bsnm{Kumar}, \binits{V.}},
+\bauthor{\bsnm{Quinlan}, \binits{J.R.}},
+\bauthor{\bsnm{Ghosh}, \binits{J.}},
+\bauthor{\bsnm{Yang}, \binits{Q.}},
+\bauthor{\bsnm{Motoda}, \binits{H.}},
+\bauthor{\bsnm{McLachlan}, \binits{G.J.}},
+\bauthor{\bsnm{Ng}, \binits{A.}},
+\bauthor{\bsnm{Liu}, \binits{B.}},
+\bauthor{\bsnm{Philip}, \binits{S.Y.}}, \betal:
+\batitle{Top 10 algorithms in data mining}.
+\bjtitle{Knowledge and information systems}
+\bvolume{14}(\bissue{1}),
+\bfpage{1}--\blpage{37}
+(\byear{2008})
+\end{barticle}
+\endbibitem
+
+%%% 77
+\bibitem[\protect\citeauthoryear{Yates}{1984}]{ContingencyTable1984}
+\begin{barticle}
+\bauthor{\bsnm{Yates}, \binits{F.}}:
+\batitle{Tests of significance for 2 x 2 contingency tables}.
+\bjtitle{Royal Statistical Society}
+\bvolume{147}(\bissue{3}),
+\bfpage{426}--\blpage{463}
+(\byear{1984})
+\end{barticle}
+\endbibitem
+
+%%% 78
+\bibitem[\protect\citeauthoryear{Yermack}{2013}]{NBER2013}
+\begin{botherref}
+\oauthor{\bsnm{Yermack}, \binits{D.}}:
+Is bitcoin a real currency? an economic appraisal.
+Working Paper 19747,
+National Bureau of Economic Research
+(December 2013).
+doi:\doiurl{10.3386/w19747}.
+\url{http://www.nber.org/papers/w19747}
+\end{botherref}
+\endbibitem
+
+%%% 79
+\bibitem[\protect\citeauthoryear{Zeileis et~al.}{2007}]{vcd_assoc3}
+\begin{barticle}
+\bauthor{\bsnm{Zeileis}, \binits{A.}},
+\bauthor{\bsnm{Meyer}, \binits{D.}},
+\bauthor{\bsnm{Hornik}, \binits{K.}}:
+\batitle{Residual-based shadings for visualizing (conditional) independence}.
+\bjtitle{Journal of Computational and Graphical Statistics}
+\bvolume{16}(\bissue{3}),
+\bfpage{507}--\blpage{525}
+(\byear{2007})
+\end{barticle}
+\endbibitem
+
+%%% 80
+\bibitem[\protect\citeauthoryear{Zhang et~al.}{2018}]{Zhang2018SomeSF}
+\begin{barticle}
+\bauthor{\bsnm{Zhang}, \binits{W.}},
+\bauthor{\bsnm{Wang}, \binits{P.}},
+\bauthor{\bsnm{Li}, \binits{X.}},
+\bauthor{\bsnm{Shen}, \binits{D.}}:
+\batitle{Some stylized facts of the cryptocurrency market}.
+\bjtitle{Applied Economics}
+\bvolume{50}(\bissue{55}),
+\bfpage{5950}--\blpage{5965}
+(\byear{2018})
+\end{barticle}
+\endbibitem
+
+%%% 81
+\bibitem[\protect\citeauthoryear{Zieba
+  et~al.}{2019}]{ShockTransmissionCryptoMK2019}
+\begin{barticle}
+\bauthor{\bsnm{Zieba}},
+\bauthor{\bsnm{Damian}},
+\bauthor{\bsnm{Kokoszczyski}},
+\bauthor{\bsnm{Ryszard}},
+\bauthor{\bsnm{Sledziewska}},
+\bauthor{\bsnm{Katarzyna}}:
+\batitle{Shock transmission in the cryptocurrency market. is bitcoin the most
+  influential?}
+\bjtitle{International Review of Financial Analysis}
+\bvolume{64},
+\bfpage{102}--\blpage{125}
+(\byear{2019})
+\end{barticle}
+\endbibitem
+
+\end{thebibliography}
+
+\newcommand{\BMCxmlcomment}[1]{}
+
+\BMCxmlcomment{
+
+<refgrp>
+
+<bibl id="B1">
+</bibl>
+
+<bibl id="B2">
+  <title><p>Cluster Ensembles</p></title>
+  <aug>
+    <au><snm>Acharya</snm><fnm>JGA</fnm></au>
+  </aug>
+  <source>WIRES Data Mining and Knowledge discovery</source>
+  <publisher>Wiley Online Library</publisher>
+  <pubdate>2011</pubdate>
+  <volume>1</volume>
+  <issue>4</issue>
+  <fpage>305</fpage>
+  <lpage>315</lpage>
+</bibl>
+
+<bibl id="B3">
+  <title><p>Data Clustering: Algorithms and Applications</p></title>
+  <aug>
+    <au><cnm>Aggarwal</cnm></au>
+    <au><snm>C.</snm><fnm>C</fnm></au>
+    <au><cnm>Reddy</cnm></au>
+    <au><snm>K.</snm><fnm>C</fnm></au>
+  </aug>
+  <publisher>Chapman \& Hall/CRC</publisher>
+  <edition>1</edition>
+  <pubdate>2013</pubdate>
+</bibl>
+
+<bibl id="B4">
+  <title><p>Stock market co-movement assessment using a three-phase clustering
+  method</p></title>
+  <aug>
+    <au><snm>Aghabozorgi</snm><fnm>S</fnm></au>
+    <au><snm>Teh</snm><fnm>YW</fnm></au>
+  </aug>
+  <source>Expert Systems with Applications</source>
+  <pubdate>2014</pubdate>
+  <volume>41</volume>
+  <issue>4, Part 1</issue>
+  <fpage>1301</fpage>
+  <lpage>1314</lpage>
+</bibl>
+
+<bibl id="B5">
+  <title><p>Time-series clustering--a decade review</p></title>
+  <aug>
+    <au><snm>Aghabozorgi</snm><fnm>S</fnm></au>
+    <au><snm>Shirkhorshidi</snm><fnm>AS</fnm></au>
+    <au><snm>Wah</snm><fnm>TY</fnm></au>
+  </aug>
+  <source>Information Systems</source>
+  <publisher>Elsevier</publisher>
+  <pubdate>2015</pubdate>
+  <volume>53</volume>
+  <fpage>16</fpage>
+  <lpage>-38</lpage>
+</bibl>
+
+<bibl id="B6">
+  <title><p>An introduction to categorical data analysis</p></title>
+  <aug>
+    <au><snm>Agresti</snm><fnm>A</fnm></au>
+  </aug>
+  <publisher>John Wiley \& Sons</publisher>
+  <pubdate>2018</pubdate>
+</bibl>
+
+<bibl id="B7">
+  <title><p>An extensive comparative study of cluster validity
+  indices</p></title>
+  <aug>
+    <au><snm>Arbelaitz</snm><fnm>O</fnm></au>
+    <au><snm>Gurrutxaga</snm><fnm>I</fnm></au>
+    <au><snm>Muguerza</snm><fnm>J</fnm></au>
+    <au><snm>P{\'e}rez</snm><fnm>JM</fnm></au>
+    <au><snm>Perona</snm><fnm>I</fnm></au>
+  </aug>
+  <source>Pattern Recognition</source>
+  <pubdate>2013</pubdate>
+  <volume>46</volume>
+  <fpage>243</fpage>
+  <lpage>256</lpage>
+</bibl>
+
+<bibl id="B8">
+  <title><p>Forecasting histogram time series with k-nearest neighbours
+  methods</p></title>
+  <aug>
+    <au><snm>Arroyo</snm><fnm>J</fnm></au>
+    <au><snm>Mat\'e</snm><fnm>C</fnm></au>
+  </aug>
+  <source>International Journal of Forecasting</source>
+  <pubdate>2009</pubdate>
+  <volume>25</volume>
+  <issue>1</issue>
+  <fpage>192</fpage>
+  <lpage>-207</lpage>
+</bibl>
+
+<bibl id="B9">
+  <title><p>Smoothing methods for histogram-valued time series: an application
+  to value-at-risk</p></title>
+  <aug>
+    <au><snm>Arroyo</snm><fnm>J</fnm></au>
+    <au><snm>Gonz\'alez Rivera</snm><fnm>G</fnm></au>
+    <au><snm>Mat\'e</snm><fnm>C</fnm></au>
+    <au><snm>San Roque</snm><fnm>AM</fnm></au>
+  </aug>
+  <source>Statistical Analysis and Data Mining: The ASA Data Science
+  Journal</source>
+  <pubdate>2011</pubdate>
+  <volume>4</volume>
+  <issue>2</issue>
+  <fpage>216</fpage>
+  <lpage>228</lpage>
+</bibl>
+
+<bibl id="B10">
+  <title><p>Practical Portfolio Performance Measurement and
+  Attribution</p></title>
+  <aug>
+    <au><snm>Bacon</snm><fnm>C.R.</fnm></au>
+  </aug>
+  <publisher>John Wiley \& Sons</publisher>
+  <series><title><p>The Wiley Finance Series</p></title></series>
+  <pubdate>2008</pubdate>
+</bibl>
+
+<bibl id="B11">
+  <title><p>Bitcoins as an investment or speculative vehicle? A first
+  look</p></title>
+  <aug>
+    <au><snm>Baek</snm><fnm>C</fnm></au>
+    <au><snm>Elbeck</snm><fnm>M</fnm></au>
+  </aug>
+  <source>Applied Economics Letters</source>
+  <publisher>Taylor \& Francis</publisher>
+  <pubdate>2015</pubdate>
+  <volume>22</volume>
+  <issue>1</issue>
+  <fpage>30</fpage>
+  <lpage>-34</lpage>
+</bibl>
+
+<bibl id="B12">
+  <title><p>Validating clusters using the Hopkins statistic</p></title>
+  <aug>
+    <au><snm>Banerjee</snm><fnm>A</fnm></au>
+    <au><snm>Dave</snm><fnm>RN</fnm></au>
+  </aug>
+  <source>2004 IEEE International Conference on Fuzzy Systems (IEEE Cat.
+  No.04CH37542)</source>
+  <pubdate>2004</pubdate>
+  <volume>1</volume>
+  <fpage>149</fpage>
+  <lpage>153</lpage>
+</bibl>
+
+<bibl id="B13">
+  <title><p>Accelerating Dynamic Time Warping Clustering with a Novel
+  Admissible Pruning Strategy</p></title>
+  <aug>
+    <au><snm>Begum</snm><fnm>N</fnm></au>
+    <au><snm>Ulanova</snm><fnm>L</fnm></au>
+    <au><snm>Wang</snm><fnm>J</fnm></au>
+    <au><snm>Keogh</snm><fnm>E</fnm></au>
+  </aug>
+  <source>Proceedings of the 21th ACM SIGKDD International Conference on
+  Knowledge Discovery and Data Mining</source>
+  <publisher>New York, NY, USA: Association for Computing Machinery</publisher>
+  <series><title><p>KDD ’15</p></title></series>
+  <pubdate>2015</pubdate>
+  <fpage>49–58</fpage>
+  <url>https://doi.org/10.1145/2783258.2783286</url>
+</bibl>
+
+<bibl id="B14">
+  <title><p>Scaling properties of extreme price fluctuations in Bitcoin
+  markets</p></title>
+  <aug>
+    <au><snm>Begusic</snm><fnm>S</fnm></au>
+    <au><snm>Kostanjcar</snm><fnm>Z</fnm></au>
+    <au><snm>{Eugene Stanley}</snm><fnm>H.</fnm></au>
+    <au><snm>Podobnik</snm><fnm>B</fnm></au>
+  </aug>
+  <source>Physica A: Statistical Mechanics and its Applications</source>
+  <pubdate>2018</pubdate>
+  <volume>510</volume>
+  <fpage>400</fpage>
+  <lpage>406</lpage>
+  <url>http://www.sciencedirect.com/science/article/pii/S0378437118308550</url>
+</bibl>
+
+<bibl id="B15">
+  <title><p>Using dynamic time warping to find patterns in time
+  series.</p></title>
+  <aug>
+    <au><snm>Berndt</snm><fnm>DJ</fnm></au>
+    <au><snm>Clifford</snm><fnm>J</fnm></au>
+  </aug>
+  <source>KDD workshop</source>
+  <pubdate>1994</pubdate>
+  <volume>10</volume>
+  <fpage>359</fpage>
+  <lpage>-370</lpage>
+</bibl>
+
+<bibl id="B16">
+  <title><p>{alluvial}: R Package for Creating Alluvial Diagrams</p></title>
+  <aug>
+    <au><snm>Bojanowski</snm><fnm>M</fnm></au>
+    <au><snm>Edwards</snm><fnm>R</fnm></au>
+  </aug>
+  <pubdate>2016</pubdate>
+  <url>https://github.com/mbojan/alluvial</url>
+  <note>R package version: 0.1-2</note>
+</bibl>
+
+<bibl id="B17">
+  <title><p>Networks of equities in financial markets</p></title>
+  <aug>
+    <au><snm>Bonanno</snm><fnm>G.</fnm></au>
+    <au><snm>Caldarelli</snm><fnm>G.</fnm></au>
+    <au><snm>Lillo</snm><fnm>F.</fnm></au>
+    <au><snm>S.</snm><fnm>M</fnm></au>
+    <au><snm>Vandewalle</snm><fnm>N.</fnm></au>
+    <au><snm>Mantegna</snm><fnm>R. N.</fnm></au>
+  </aug>
+  <source>The European Physical Journal B - Condensed Matter</source>
+  <publisher>Springer Science and Business Media LLC</publisher>
+  <pubdate>2004</pubdate>
+  <volume>38</volume>
+  <issue>2</issue>
+  <fpage>363–371</fpage>
+  <url>http://dx.doi.org/10.1140/epjb/e2004-00129-6</url>
+</bibl>
+
+<bibl id="B18">
+  <title><p>Cryptocurrency-portfolios in a mean-variance framework</p></title>
+  <aug>
+    <au><snm>Brauneis</snm><fnm>A</fnm></au>
+    <au><snm>Mestel</snm><fnm>R</fnm></au>
+  </aug>
+  <source>Finance Research Letters</source>
+  <publisher>Elsevier</publisher>
+  <pubdate>2019</pubdate>
+  <volume>28</volume>
+  <fpage>259</fpage>
+  <lpage>-264</lpage>
+</bibl>
+
+<bibl id="B19">
+  <title><p>Dynamics and Structure of the 30 Largest North American
+  Companies</p></title>
+  <aug>
+    <au><snm>Brida</snm><fnm>J</fnm></au>
+    <au><snm>Risso</snm><fnm>W</fnm></au>
+  </aug>
+  <source>Society for Computational Economics</source>
+  <publisher>Springer Sciences</publisher>
+  <pubdate>2009</pubdate>
+  <volume>35</volume>
+  <issue>1</issue>
+  <fpage>85</fpage>
+  <lpage>99</lpage>
+</bibl>
+
+<bibl id="B20">
+  <title><p>Cryptoassets: The Innovative Investor's Guide to Bitcoin and
+  Beyond</p></title>
+  <aug>
+    <au><snm>Burniske</snm><fnm>C.</fnm></au>
+    <au><snm>Tatar</snm><fnm>J.</fnm></au>
+  </aug>
+  <publisher>McGraw-Hill Education</publisher>
+  <pubdate>2017</pubdate>
+  <url>https://books.google.es/books?id=-5AtDwAAQBAJ</url>
+</bibl>
+
+<bibl id="B21">
+  <title><p>A statistical analysis of cryptocurrencies</p></title>
+  <aug>
+    <au><snm>Chan</snm><fnm>S</fnm></au>
+    <au><snm>Chu</snm><fnm>J</fnm></au>
+    <au><snm>Nadarajah</snm><fnm>S</fnm></au>
+    <au><snm>Osterrieder</snm><fnm>J</fnm></au>
+  </aug>
+  <source>Journal of Risk and Financial Management</source>
+  <publisher>Multidisciplinary Digital Publishing Institute</publisher>
+  <pubdate>2017</pubdate>
+  <volume>10</volume>
+  <issue>2</issue>
+  <fpage>12</fpage>
+</bibl>
+
+<bibl id="B22">
+  <title><p>Using Clustering Method to Understand {Indian} Stock Market
+  Volatility</p></title>
+  <aug>
+    <au><snm>Chaudhuri</snm><fnm>TD</fnm></au>
+    <au><snm>Ghosh</snm><fnm>I</fnm></au>
+  </aug>
+  <source>Communications on Applied Electronics</source>
+  <pubdate>2015</pubdate>
+  <volume>2</volume>
+  <issue>6</issue>
+  <fpage>35</fpage>
+  <lpage>44</lpage>
+</bibl>
+
+<bibl id="B23">
+  <title><p>Exploring the dynamic relationships between cryptocurrencies and
+  other financial assets</p></title>
+  <aug>
+    <au><snm>Corbet</snm><fnm>S</fnm></au>
+    <au><snm>Meegan</snm><fnm>A</fnm></au>
+    <au><snm>Larkin</snm><fnm>CJ</fnm></au>
+    <au><snm>Lucey</snm><fnm>B</fnm></au>
+    <au><snm>Yarovaya</snm><fnm>L</fnm></au>
+  </aug>
+  <source>Economic Letters</source>
+  <publisher>Economic Letters</publisher>
+  <pubdate>2018</pubdate>
+  <volume>-</volume>
+  <issue>165</issue>
+  <fpage>28</fpage>
+  <lpage>34</lpage>
+</bibl>
+
+<bibl id="B24">
+  <title><p>Cryptocurrencies as a Financial Asset: A systematic
+  analysis</p></title>
+  <aug>
+    <au><snm>Corbet</snm><fnm>S</fnm></au>
+    <au><snm>Lucey</snm><fnm>B</fnm></au>
+    <au><snm>Urquhart</snm><fnm>A</fnm></au>
+    <au><snm>Yarovaya</snm><fnm>L</fnm></au>
+  </aug>
+  <source>International Review of Financial Analysis</source>
+  <publisher>Elsevier</publisher>
+  <pubdate>2019</pubdate>
+  <volume>62</volume>
+  <fpage>182</fpage>
+  <lpage>199</lpage>
+</bibl>
+
+<bibl id="B25">
+  <title><p>Signatures of the Crypto-Currency Market Decoupling from the
+  Forex</p></title>
+  <aug>
+    <au><snm>Drozdz</snm><fnm>S</fnm></au>
+    <au><snm>Minati</snm><fnm>L</fnm></au>
+    <au><snm>Oswiecimka</snm><fnm>P</fnm></au>
+    <au><snm>Stanuszek</snm><fnm>M</fnm></au>
+    <au><snm>Watorek</snm><fnm>M</fnm></au>
+  </aug>
+  <source>Future Internet</source>
+  <pubdate>2019</pubdate>
+  <volume>11</volume>
+  <issue>7</issue>
+  <fpage>154</fpage>
+  <url>https://app.dimensions.ai/details/publication/pub.1117918770 and
+  https://www.mdpi.com/1999-5903/11/7/154/pdf</url>
+</bibl>
+
+<bibl id="B26">
+  <title><p>GARCH-Based Robust Clustering of Time Series</p></title>
+  <aug>
+    <au><snm>D'Urso</snm><fnm>P</fnm></au>
+    <au><snm>De Giovanni</snm><fnm>L</fnm></au>
+    <au><snm>Massari</snm><fnm>R</fnm></au>
+  </aug>
+  <source>Fuzzy Sets Syst.</source>
+  <publisher>USA: Elsevier North-Holland, Inc.</publisher>
+  <pubdate>2016</pubdate>
+  <volume>305</volume>
+  <issue>C</issue>
+  <fpage>1–28</fpage>
+  <url>https://doi.org/10.1016/j.fss.2016.01.010</url>
+</bibl>
+
+<bibl id="B27">
+  <title><p>Cepstral-based clustering of financial time series</p></title>
+  <aug>
+    <au><snm>D’Urso</snm><fnm>P</fnm></au>
+    <au><snm>Giovanni</snm><fnm>LD</fnm></au>
+    <au><snm>Massari</snm><fnm>R</fnm></au>
+    <au><snm>D’Ecclesia</snm><fnm>RL</fnm></au>
+    <au><snm>Maharaj</snm><fnm>EA</fnm></au>
+  </aug>
+  <source>Expert Systems with Applications</source>
+  <pubdate>2020</pubdate>
+  <volume>161</volume>
+  <fpage>113705</fpage>
+  <url>http://www.sciencedirect.com/science/article/pii/S0957417420305297</url>
+</bibl>
+
+<bibl id="B28">
+  <title><p>On the Interpretation on teh X2 from Contingency Tables and the
+  Calculation of the P</p></title>
+  <aug>
+    <au><snm>Fisher</snm><fnm>R. A.</fnm></au>
+  </aug>
+  <source>Royal Statistical Society</source>
+  <publisher>Wiley</publisher>
+  <pubdate>1922</pubdate>
+  <volume>85</volume>
+  <issue>1</issue>
+  <fpage>87</fpage>
+  <lpage>94</lpage>
+</bibl>
+
+<bibl id="B29">
+  <title><p>Fitting Heavy Tailed Distributions: The {poweRlaw}
+  Package</p></title>
+  <aug>
+    <au><snm>Gillespie</snm><fnm>CS</fnm></au>
+  </aug>
+  <source>Journal of Statistical Software</source>
+  <pubdate>2015</pubdate>
+  <volume>64</volume>
+  <issue>2</issue>
+  <fpage>1</fpage>
+  <lpage>-16</lpage>
+  <url>http://www.jstatsoft.org/v64/i02/</url>
+</bibl>
+
+<bibl id="B30">
+  <title><p>Time series modeling of histogram-valued data: The daily histogram
+  time series of S&ampP500 intradaily returns</p></title>
+  <aug>
+    <au><snm>Gonz\'alez Rivera</snm><fnm>G</fnm></au>
+    <au><snm>Arroyo</snm><fnm>J</fnm></au>
+  </aug>
+  <source>International Journal of Forecasting</source>
+  <pubdate>2012</pubdate>
+  <volume>28</volume>
+  <issue>1</issue>
+  <fpage>20</fpage>
+  <lpage>33</lpage>
+</bibl>
+
+<bibl id="B31">
+  <title><p>Algorithm AS 136: A K-Means Clustering Algorithm</p></title>
+  <aug>
+    <au><snm>Hartigan</snm><fnm>J. A.</fnm></au>
+    <au><snm>Wong</snm><fnm>M. A.</fnm></au>
+  </aug>
+  <source>Journal of the Royal Statistical Society. Series C (Applied
+  Statistics)</source>
+  <publisher>[Wiley, Royal Statistical Society]</publisher>
+  <pubdate>1979</pubdate>
+  <volume>28</volume>
+  <issue>1</issue>
+  <fpage>100</fpage>
+  <lpage>-108</lpage>
+  <url>http://www.jstor.org/stable/2346830</url>
+</bibl>
+
+<bibl id="B32">
+  <title><p>Handbook of Cluster Analysis</p></title>
+  <aug>
+    <au><snm>Henning</snm><fnm>C</fnm></au>
+    <au><snm>Meila</snm><fnm>M</fnm></au>
+    <au><snm>Murtagh</snm><fnm>F</fnm></au>
+    <au><snm>Rocci</snm><fnm>R</fnm></au>
+  </aug>
+  <publisher>CRC Press</publisher>
+  <pubdate>2016</pubdate>
+</bibl>
+
+<bibl id="B33">
+  <title><p>A {CLUE} for {CLUster Ensembles}</p></title>
+  <aug>
+    <au><snm>Hornik</snm><fnm>K</fnm></au>
+  </aug>
+  <source>Journal of Statistical Software</source>
+  <pubdate>2005</pubdate>
+  <volume>14</volume>
+  <issue>12</issue>
+</bibl>
+
+<bibl id="B34">
+  <title><p>clue: Cluster ensembles</p></title>
+  <aug>
+    <au><snm>Hornik</snm><fnm>K</fnm></au>
+  </aug>
+  <pubdate>2019</pubdate>
+  <url>https://CRAN.R-project.org/package=clue</url>
+  <note>R package version 0.3-57</note>
+</bibl>
+
+<bibl id="B35">
+  <title><p>Cryptocurrencies: Stylized facts on a new investible
+  instrument</p></title>
+  <aug>
+    <au><snm>Hu</snm><fnm>AS</fnm></au>
+    <au><snm>Parlour</snm><fnm>CA</fnm></au>
+    <au><snm>Rajan</snm><fnm>U</fnm></au>
+  </aug>
+  <source>Financial Management</source>
+  <publisher>Wiley Online Library</publisher>
+  <pubdate>2019</pubdate>
+  <volume>48</volume>
+  <issue>4</issue>
+  <fpage>1049</fpage>
+  <lpage>-1068</lpage>
+</bibl>
+
+<bibl id="B36">
+  <title><p>Histogram-Value Data Analysis</p></title>
+  <aug>
+    <au><snm>Irpino</snm><fnm>A</fnm></au>
+  </aug>
+  <source>R library</source>
+  <publisher>CRAN</publisher>
+  <pubdate>2019</pubdate>
+  <volume>-</volume>
+  <issue>-</issue>
+</bibl>
+
+<bibl id="B37">
+  <title><p>Dynamic clustering of histograms using Wasserstein
+  metric</p></title>
+  <aug>
+    <au><snm>Irpino</snm><fnm>A.</fnm></au>
+    <au><snm>Verde</snm><fnm>R.</fnm></au>
+  </aug>
+  <source>COMPSTAT 2006, Proceedings in Computational Statistics</source>
+  <publisher>Heidelberg: Physica-Verlag</publisher>
+  <pubdate>2006</pubdate>
+  <fpage>869</fpage>
+  <lpage>-876</lpage>
+</bibl>
+
+<bibl id="B38">
+  <title><p>HistDAWass package: An R tool for histograms-values
+  data</p></title>
+  <aug>
+    <au><snm>Irpino</snm><fnm>A</fnm></au>
+  </aug>
+  <pubdate>2016</pubdate>
+  <url>https://cran.r-project.org/package=HistDAWass</url>
+  <note>R package version 1.0.4</note>
+</bibl>
+
+<bibl id="B39">
+  <title><p>Basic statistics for distributional symbolic variables: a new
+  metric-based approach</p></title>
+  <aug>
+    <au><snm>Irpino</snm><fnm>A</fnm></au>
+    <au><snm>Verde</snm><fnm>R</fnm></au>
+  </aug>
+  <source>Advances in Data Analysis and Classification</source>
+  <pubdate>2015</pubdate>
+  <volume>9</volume>
+  <fpage>143</fpage>
+  <lpage>175</lpage>
+</bibl>
+
+<bibl id="B40">
+  <title><p>Dynamic Clustering of Histogram Data Based on Adaptive Squared
+  {W}asserstein Distances</p></title>
+  <aug>
+    <au><snm>Irpino</snm><fnm>A</fnm></au>
+    <au><snm>Verde</snm><fnm>R</fnm></au>
+    <au><snm>De Carvalho</snm><fnm>FdA</fnm></au>
+  </aug>
+  <source>Expert Systems with Applications</source>
+  <publisher>USA: Pergamon Press, Inc.</publisher>
+  <pubdate>2014</pubdate>
+  <volume>41</volume>
+  <issue>7</issue>
+  <fpage>3351–3366</fpage>
+  <url>https://doi.org/10.1016/j.eswa.2013.12.001</url>
+</bibl>
+
+<bibl id="B41">
+  <title><p>Interactive visual exploration and refinement of cluster
+  assignments</p></title>
+  <aug>
+    <au><snm>Kern</snm><fnm>M</fnm></au>
+    <au><snm>Lex</snm><fnm>A</fnm></au>
+    <au><snm>Gehlenborg</snm><fnm>N</fnm></au>
+    <au><snm>Johnson</snm><fnm>CR</fnm></au>
+  </aug>
+  <source>BMC bioinformatics</source>
+  <publisher>BioMed Central</publisher>
+  <pubdate>2017</pubdate>
+  <volume>18</volume>
+  <issue>1</issue>
+  <fpage>1</fpage>
+  <lpage>-13</lpage>
+</bibl>
+
+<bibl id="B42">
+  <title><p>Faster Retrieval with a Two-Pass Dynamic-Time-Warping Lower
+  Bound</p></title>
+  <aug>
+    <au><snm>Lemire</snm><fnm>D</fnm></au>
+  </aug>
+  <source>CoRR</source>
+  <pubdate>2008</pubdate>
+  <volume>abs/0811.3301</volume>
+  <url>http://arxiv.org/abs/0811.3301</url>
+</bibl>
+
+<bibl id="B43">
+  <title><p>What drives cryptocurrency value? A volatility and predictability
+  analysis</p></title>
+  <aug>
+    <au><snm>Letra</snm><fnm>IJS</fnm></au>
+  </aug>
+  <source>PhD thesis</source>
+  <publisher>Instituto Superior de Economia e Gest{\~a}o</publisher>
+  <pubdate>2016</pubdate>
+</bibl>
+
+<bibl id="B44">
+  <title><p>Mining stock category association and cluster on {Taiwan} stock
+  market</p></title>
+  <aug>
+    <au><snm>Liao</snm><fnm>SH</fnm></au>
+  </aug>
+  <source>Expert Systems with Applications</source>
+  <publisher>Elsevier</publisher>
+  <pubdate>2007</pubdate>
+  <volume>35</volume>
+  <fpage>19</fpage>
+  <lpage>29</lpage>
+</bibl>
+
+<bibl id="B45">
+  <title><p>Data Mining Investigation of Co-Movements on the {Taiwan} and
+  {China} Stock Markets for Future Investment Portfolio</p></title>
+  <aug>
+    <au><snm>Liao</snm><fnm>SH</fnm></au>
+    <au><snm>Chou</snm><fnm>SY</fnm></au>
+  </aug>
+  <source>Expert Systems with Applications</source>
+  <publisher>USA: Pergamon Press, Inc.</publisher>
+  <pubdate>2013</pubdate>
+  <volume>40</volume>
+  <issue>5</issue>
+  <fpage>1542–1554</fpage>
+  <url>https://doi.org/10.1016/j.eswa.2012.08.075</url>
+</bibl>
+
+<bibl id="B46">
+  <title><p>Clustering of time series data-a survey</p></title>
+  <aug>
+    <au><snm>Liao</snm><fnm>TW</fnm></au>
+  </aug>
+  <source>The journal of the pattern recognition society</source>
+  <publisher>Elsevier</publisher>
+  <pubdate>2005</pubdate>
+  <volume>1</volume>
+  <issue>38</issue>
+  <fpage>1857</fpage>
+  <lpage>1874</lpage>
+</bibl>
+
+<bibl id="B47">
+  <title><p>Portfolio diversification across cryptocurrencies</p></title>
+  <aug>
+    <au><snm>Liu</snm><fnm>W</fnm></au>
+  </aug>
+  <source>Finance Research Letters</source>
+  <publisher>Elsevier</publisher>
+  <pubdate>2019</pubdate>
+  <volume>29</volume>
+  <fpage>200</fpage>
+  <lpage>-205</lpage>
+</bibl>
+
+<bibl id="B48">
+  <title><p>{XCluSim}: a visual analytics tool for interactively comparing
+  multiple clustering results of bioinformatics data</p></title>
+  <aug>
+    <au><snm>L'Yi</snm><fnm>S</fnm></au>
+    <au><snm>Ko</snm><fnm>B</fnm></au>
+    <au><snm>Shin</snm><fnm>D</fnm></au>
+    <au><snm>Cho</snm><fnm>YJ</fnm></au>
+    <au><snm>Lee</snm><fnm>J</fnm></au>
+    <au><snm>Kim</snm><fnm>B</fnm></au>
+    <au><snm>Seo</snm><fnm>J</fnm></au>
+  </aug>
+  <source>BMC bioinformatics</source>
+  <publisher>Springer</publisher>
+  <pubdate>2015</pubdate>
+  <volume>16</volume>
+  <issue>S11</issue>
+  <fpage>S5</fpage>
+</bibl>
+
+<bibl id="B49">
+  <title><p>Some methods for classification and analysis of multivariate
+  observations</p></title>
+  <aug>
+    <au><snm>MacQueen</snm><fnm>J.</fnm></au>
+  </aug>
+  <source>Proceedings of the Fifth Berkeley Sympposium on Mathematical
+  Statistics and Probability</source>
+  <publisher>-</publisher>
+  <pubdate>1967</pubdate>
+  <volume>1</volume>
+  <issue>-</issue>
+  <fpage>281</fpage>
+  <lpage>297</lpage>
+</bibl>
+
+<bibl id="B50">
+  <title><p>{Evaluation of forecasting methods from selected stock market
+  returns}</p></title>
+  <aug>
+    <au><snm>Mallikarjuna</snm><fnm>M.</fnm></au>
+    <au><snm>Rao</snm><fnm>RP</fnm></au>
+  </aug>
+  <source>Financial Innovation</source>
+  <pubdate>2019</pubdate>
+  <volume>5</volume>
+  <issue>1</issue>
+  <fpage>1</fpage>
+  <lpage>16</lpage>
+  <url>https://ideas.repec.org/a/spr/fininn/v5y2019i1d10.1186_s40854-019-0157-x.html</url>
+</bibl>
+
+<bibl id="B51">
+  <title><p>Hierarchical structure in financial markets</p></title>
+  <aug>
+    <au><snm>Mantegna</snm><fnm>RN</fnm></au>
+  </aug>
+  <source>European Physical Journal B</source>
+  <publisher>Springer Verlag</publisher>
+  <pubdate>1999</pubdate>
+  <volume>11</volume>
+  <issue>1</issue>
+  <fpage>193</fpage>
+  <lpage>197</lpage>
+</bibl>
+
+<bibl id="B52">
+  <title><p>{A review of two decades of correlations, hierarchies, networks and
+  clustering in financial markets}</p></title>
+  <aug>
+    <au><snm>Marti</snm><fnm>G</fnm></au>
+    <au><snm>Nielsen</snm><fnm>F</fnm></au>
+    <au><snm>Bi'nkowski</snm><fnm>M</fnm></au>
+    <au><snm>Donnat</snm><fnm>P</fnm></au>
+  </aug>
+  <source>Papers</source>
+  <pubdate>2017</pubdate>
+  <issue>1703.00485</issue>
+  <url>https://arxiv.org/abs/1703.00485</url>
+</bibl>
+
+<bibl id="B53">
+  <title><p>A network algorithm for performing Fisher exact test in rxc
+  contingency table</p></title>
+  <aug>
+    <au><snm>Mehta</snm><fnm>CR</fnm></au>
+    <au><snm>Patel</snm><fnm>NR</fnm></au>
+  </aug>
+  <source>Journal of the American Statistical Association</source>
+  <publisher>American Statistical Association, Taylor & Francis,
+  Ltd.</publisher>
+  <pubdate>1983</pubdate>
+  <volume>78</volume>
+  <issue>382</issue>
+  <fpage>427</fpage>
+  <lpage>-434</lpage>
+  <url>http://www.jstor.org/stable/2288652</url>
+</bibl>
+
+<bibl id="B54">
+  <title><p>Exact Tests™</p></title>
+  <aug>
+    <au><snm>Mehta</snm><fnm>CR</fnm></au>
+    <au><snm>Patel</snm><fnm>NR</fnm></au>
+  </aug>
+  <source>SPSS exact tests</source>
+  <pubdate>1996</pubdate>
+  <volume>7</volume>
+  <fpage>12</fpage>
+</bibl>
+
+<bibl id="B55">
+  <title><p>The Strucplot Framework: Visualizing Multi-Way Contingency Tables
+  with vcd</p></title>
+  <aug>
+    <au><snm>Meyer</snm><fnm>D</fnm></au>
+    <au><snm>Zeileis</snm><fnm>A</fnm></au>
+    <au><snm>Hornik</snm><fnm>K</fnm></au>
+  </aug>
+  <source>Journal of Statistical Software</source>
+  <pubdate>2006</pubdate>
+  <volume>17</volume>
+  <issue>3</issue>
+  <fpage>1</fpage>
+  <lpage>-48</lpage>
+  <url>http://www.jstatsoft.org/v17/i03/</url>
+</bibl>
+
+<bibl id="B56">
+  <title><p>vcd: Visualizing Categorical Data</p></title>
+  <aug>
+    <au><snm>Meyer</snm><fnm>D</fnm></au>
+    <au><snm>Zeileis</snm><fnm>A</fnm></au>
+    <au><snm>Hornik</snm><fnm>K</fnm></au>
+  </aug>
+  <pubdate>2020</pubdate>
+  <note>R package version 1.4-7</note>
+</bibl>
+
+<bibl id="B57">
+  <title><p>Correlation networks among currencies</p></title>
+  <aug>
+    <au><snm>Mizuno</snm><fnm>T</fnm></au>
+    <au><snm>Takayasu</snm><fnm>H</fnm></au>
+    <au><snm>Takayasu</snm><fnm>M</fnm></au>
+  </aug>
+  <source>Physica A: Statistical Mechanics and its Applications</source>
+  <publisher>Elsevier BV</publisher>
+  <pubdate>2006</pubdate>
+  <volume>364</volume>
+  <fpage>336–342</fpage>
+  <url>http://dx.doi.org/10.1016/j.physa.2005.08.079</url>
+</bibl>
+
+<bibl id="B58">
+  <title><p>Bitcoin: A peer-to-peer electronic cash system</p></title>
+  <aug>
+    <au><snm>Nakamoto</snm><fnm>S</fnm></au>
+  </aug>
+  <pubdate>2009</pubdate>
+  <url>http://www.bitcoin.org/bitcoin.pdf</url>
+</bibl>
+
+<bibl id="B59">
+  <title><p>Clustering {Indian} stock market data for portfolio
+  management</p></title>
+  <aug>
+    <au><snm>Nanda</snm><fnm>SR</fnm></au>
+    <au><snm>Mahanty</snm><fnm>B</fnm></au>
+    <au><snm>Tiwari</snm><fnm>MK</fnm></au>
+  </aug>
+  <source>Expert System with Applications</source>
+  <pubdate>2010</pubdate>
+  <volume>37</volume>
+  <fpage>8793</fpage>
+  <lpage>8798</lpage>
+</bibl>
+
+<bibl id="B60">
+  <title><p>Power laws, Pareto distributions and Zipf's law</p></title>
+  <aug>
+    <au><snm>Newman</snm><fnm>MEJ</fnm></au>
+  </aug>
+  <source>Contemporary Physics</source>
+  <pubdate>2005</pubdate>
+  <volume>46</volume>
+  <issue>5</issue>
+  <fpage>323</fpage>
+  <lpage>351</lpage>
+  <url>http://www.tandfonline.com/doi/abs/10.1080/00107510500052444</url>
+</bibl>
+
+<bibl id="B61">
+  <title><p>Far beyond the classical data models: symbolic data
+  analysis</p></title>
+  <aug>
+    <au><snm>Noirhomme Fraiture</snm><fnm>M</fnm></au>
+    <au><snm>Brito</snm><fnm>P</fnm></au>
+  </aug>
+  <source>Statistical Analysis and Data Mining: The ASA Data Science
+  Journal</source>
+  <pubdate>2011</pubdate>
+  <volume>4</volume>
+  <issue>2</issue>
+  <fpage>157</fpage>
+  <lpage>170</lpage>
+</bibl>
+
+<bibl id="B62">
+  <title><p>Dynamics of market correlations: Taxonomy and portfolio
+  analysis</p></title>
+  <aug>
+    <au><snm>Onnela</snm><fnm>J. P.</fnm></au>
+    <au><snm>Chakraborti</snm><fnm>A.</fnm></au>
+    <au><snm>Kaski</snm><fnm>K.</fnm></au>
+    <au><snm>Kertész</snm><fnm>J.</fnm></au>
+    <au><snm>Kanto</snm><fnm>A.</fnm></au>
+  </aug>
+  <source>Physical Review E</source>
+  <publisher>American Physical Society (APS)</publisher>
+  <pubdate>2003</pubdate>
+  <volume>68</volume>
+  <issue>5</issue>
+  <url>http://dx.doi.org/10.1103/PhysRevE.68.056110</url>
+</bibl>
+
+<bibl id="B63">
+  <title><p>A Statistical Classification of Cryptocurrencies</p></title>
+  <aug>
+    <au><snm>Pele</snm><fnm>D</fnm></au>
+    <au><snm>Wesselhöfft</snm><fnm>N</fnm></au>
+    <au><snm>Härdle</snm><fnm>W</fnm></au>
+    <au><snm>Kolossiatis</snm><fnm>M</fnm></au>
+    <au><snm>Yannis</snm><fnm>Y</fnm></au>
+  </aug>
+  <pubdate>2020</pubdate>
+  <url>https://ssrn.com/abstract=3548462</url>
+</bibl>
+
+<bibl id="B64">
+  <title><p>PerformanceAnlytics: Econometric Tools for Performance and Risk
+  Analysis</p></title>
+  <aug>
+    <au><snm>Peterson</snm><fnm>BG</fnm></au>
+    <au><snm>Carl</snm><fnm>P</fnm></au>
+    <au><snm>Boudt</snm><fnm>K</fnm></au>
+    <au><snm>Bennet</snm><fnm>R</fnm></au>
+    <au><snm>Ulrich</snm><fnm>J</fnm></au>
+    <au><snm>Zivot</snm><fnm>E</fnm></au>
+    <au><snm>Lestel</snm><fnm>M</fnm></au>
+    <au><snm>Balkissoon</snm><fnm>K</fnm></au>
+    <au><snm>Wuertz</snm><fnm>D</fnm></au>
+  </aug>
+  <pubdate>2018</pubdate>
+  <url>https://cran.r-project.org/package=PerformanceAnalytics</url>
+  <note>R package version 1.5.2</note>
+</bibl>
+
+<bibl id="B65">
+  <title><p>Clustering of financial time series</p></title>
+  <aug>
+    <au><snm>Pierpaolo</snm><fnm>D</fnm></au>
+    <au><snm>Cappelli</snm><fnm>C</fnm></au>
+    <au><snm>Di Lallo</snm><fnm>D</fnm></au>
+    <au><snm>Massari</snm><fnm>R</fnm></au>
+  </aug>
+  <source>Physica A: Statistical Mechanics and its Applications</source>
+  <pubdate>2013</pubdate>
+  <volume>392</volume>
+  <issue>9</issue>
+  <fpage>2114</fpage>
+  <lpage>2129</lpage>
+  <url>https://EconPapers.repec.org/RePEc:eee:phsmap:v:392:y:2013:i:9:p:2114-2129</url>
+</bibl>
+
+<bibl id="B66">
+  <title><p>Optimal vs na{\"\i}ve diversification in
+  cryptocurrencies</p></title>
+  <aug>
+    <au><snm>Platanakis</snm><fnm>E</fnm></au>
+    <au><snm>Sutcliffe</snm><fnm>C</fnm></au>
+    <au><snm>Urquhart</snm><fnm>A</fnm></au>
+  </aug>
+  <source>Economics Letters</source>
+  <publisher>Elsevier</publisher>
+  <pubdate>2018</pubdate>
+  <volume>171</volume>
+  <fpage>93</fpage>
+  <lpage>-96</lpage>
+</bibl>
+
+<bibl id="B67">
+  <title><p>R: A Language and Environment for Statistical Computing</p></title>
+  <aug>
+    <au><cnm>{R Core Team}</cnm></au>
+  </aug>
+  <publisher>Vienna, Austria</publisher>
+  <pubdate>2013</pubdate>
+  <url>http://www.R-project.org/</url>
+</bibl>
+
+<bibl id="B68">
+  <title><p>Recent techniques of clustering of time series data: a
+  survey</p></title>
+  <aug>
+    <au><snm>Rani</snm><fnm>S</fnm></au>
+    <au><snm>Sikka</snm><fnm>G</fnm></au>
+  </aug>
+  <source>International Journal of Computer Applications</source>
+  <publisher>Foundation of Computer Science</publisher>
+  <pubdate>2012</pubdate>
+  <volume>52</volume>
+  <issue>15</issue>
+</bibl>
+
+<bibl id="B69">
+  <title><p>Clustering by fast search and find of density peaks</p></title>
+  <aug>
+    <au><snm>Rodriguez</snm><fnm>A</fnm></au>
+    <au><snm>Laio</snm><fnm>A</fnm></au>
+  </aug>
+  <source>Science</source>
+  <publisher>American Association for the Advancement of Science</publisher>
+  <pubdate>2014</pubdate>
+  <volume>344</volume>
+  <issue>6191</issue>
+  <fpage>1492</fpage>
+  <lpage>-1496</lpage>
+  <url>https://science.sciencemag.org/content/344/6191/1492</url>
+</bibl>
+
+<bibl id="B70">
+  <title><p>Mapping Change in Large Networks</p></title>
+  <aug>
+    <au><snm>Rosvall</snm><fnm>M</fnm></au>
+    <au><snm>Bergstrom</snm><fnm>CT</fnm></au>
+  </aug>
+  <source>PLoS ONE</source>
+  <pubdate>2010</pubdate>
+  <volume>5</volume>
+</bibl>
+
+<bibl id="B71">
+  <title><p>dtwclust: Time Series Clustering Along with Optimizations for the
+  Dynamic Time Warping Distance</p></title>
+  <aug>
+    <au><snm>Sarda Espinosa</snm><fnm>A</fnm></au>
+  </aug>
+  <pubdate>2019</pubdate>
+  <url>https://CRAN.R-project.org/package=dtwclust</url>
+  <note>R package version 5.5.6</note>
+</bibl>
+
+<bibl id="B72">
+  <title><p>Time-Series Clustering in {R} Using the {dtwclust}
+  Package</p></title>
+  <aug>
+    <au><snm>Sard{\'a} Espinosa</snm><fnm>A</fnm></au>
+  </aug>
+  <source>The R Journal</source>
+  <pubdate>2019</pubdate>
+  <volume>11</volume>
+  <issue>1</issue>
+  <fpage>22</fpage>
+  <lpage>-43</lpage>
+</bibl>
+
+<bibl id="B73">
+  <title><p>Clustering patterns in efficiency and the coming-of-age of the
+  cryptocurrency market</p></title>
+  <aug>
+    <au><snm>Sigaki</snm><fnm>HYD</fnm></au>
+    <au><snm>Perc</snm><fnm>M</fnm></au>
+    <au><snm>Ribeiro</snm><fnm>HV</fnm></au>
+  </aug>
+  <source>Scientific Reports</source>
+  <pubdate>2019</pubdate>
+</bibl>
+
+<bibl id="B74">
+  <title><p>Cluster analysis on the structure of the cryptocurrency market via
+  {B}itcoin-{E}thereum filtering</p></title>
+  <aug>
+    <au><snm>Song</snm><fnm>JY</fnm></au>
+    <au><snm>Chang</snm><fnm>W</fnm></au>
+    <au><snm>Song</snm><fnm>JW</fnm></au>
+  </aug>
+  <source>Physica A-Statistical Mechanics and its Applications</source>
+  <publisher>Elsevier</publisher>
+  <pubdate>2019</pubdate>
+  <volume>527</volume>
+</bibl>
+
+<bibl id="B75">
+  <title><p>Collective behavior of cryptocurrency price changes</p></title>
+  <aug>
+    <au><snm>Stosic</snm><fnm>D</fnm></au>
+    <au><snm>Stosic</snm><fnm>D</fnm></au>
+    <au><snm>Ludermir</snm><fnm>TB</fnm></au>
+    <au><snm>Stosic</snm><fnm>T</fnm></au>
+  </aug>
+  <source>Physica A: Statistical Mechanics and its Applications</source>
+  <publisher>Elsevier</publisher>
+  <pubdate>2018</pubdate>
+  <volume>507</volume>
+  <fpage>499</fpage>
+  <lpage>-509</lpage>
+</bibl>
+
+<bibl id="B76">
+  <title><p>Multiscale characteristics of the emerging global cryptocurrency
+  market</p></title>
+  <aug>
+    <au><snm>Watorek</snm><fnm>M</fnm></au>
+    <au><snm>Drozdz</snm><fnm>S</fnm></au>
+    <au><snm>Kwapien</snm><fnm>J</fnm></au>
+    <au><snm>Minati</snm><fnm>L</fnm></au>
+    <au><snm>Oswiecimka</snm><fnm>P</fnm></au>
+    <au><snm>Stanuszek</snm><fnm>M</fnm></au>
+  </aug>
+  <source>Physics Reports</source>
+  <pubdate>2020</pubdate>
+  <url>http://www.sciencedirect.com/science/article/pii/S0370157320304166</url>
+</bibl>
+
+<bibl id="B77">
+  <title><p>Top 10 algorithms in data mining</p></title>
+  <aug>
+    <au><snm>Wu</snm><fnm>X</fnm></au>
+    <au><snm>Kumar</snm><fnm>V</fnm></au>
+    <au><snm>Quinlan</snm><fnm>JR</fnm></au>
+    <au><snm>Ghosh</snm><fnm>J</fnm></au>
+    <au><snm>Yang</snm><fnm>Q</fnm></au>
+    <au><snm>Motoda</snm><fnm>H</fnm></au>
+    <au><snm>McLachlan</snm><fnm>GJ</fnm></au>
+    <au><snm>Ng</snm><fnm>A</fnm></au>
+    <au><snm>Liu</snm><fnm>B</fnm></au>
+    <au><snm>Philip</snm><fnm>SY</fnm></au>
+    <au><cnm>others</cnm></au>
+  </aug>
+  <source>Knowledge and information systems</source>
+  <publisher>Springer</publisher>
+  <pubdate>2008</pubdate>
+  <volume>14</volume>
+  <issue>1</issue>
+  <fpage>1</fpage>
+  <lpage>-37</lpage>
+</bibl>
+
+<bibl id="B78">
+  <title><p>Tests of Significance for 2 x 2 Contingency Tables</p></title>
+  <aug>
+    <au><snm>Yates</snm><fnm>F.</fnm></au>
+  </aug>
+  <source>Royal Statistical Society</source>
+  <publisher>Wiley</publisher>
+  <pubdate>1984</pubdate>
+  <volume>147</volume>
+  <issue>3</issue>
+  <fpage>426</fpage>
+  <lpage>463</lpage>
+</bibl>
+
+<bibl id="B79">
+  <title><p>Is Bitcoin a Real Currency? An economic appraisal</p></title>
+  <aug>
+    <au><snm>Yermack</snm><fnm>D</fnm></au>
+  </aug>
+  <source>Working Paper</source>
+  <series><title><p>Working Paper Series</p></title></series>
+  <pubdate>2013</pubdate>
+  <issue>19747</issue>
+  <url>http://www.nber.org/papers/w19747</url>
+</bibl>
+
+<bibl id="B80">
+  <title><p>Residual-based Shadings for Visualizing (Conditional)
+  Independence</p></title>
+  <aug>
+    <au><snm>Zeileis</snm><fnm>A</fnm></au>
+    <au><snm>Meyer</snm><fnm>D</fnm></au>
+    <au><snm>Hornik</snm><fnm>K</fnm></au>
+  </aug>
+  <source>Journal of Computational and Graphical Statistics</source>
+  <pubdate>2007</pubdate>
+  <volume>16</volume>
+  <issue>3</issue>
+  <fpage>507</fpage>
+  <lpage>-525</lpage>
+</bibl>
+
+<bibl id="B81">
+  <title><p>Some stylized facts of the cryptocurrency market</p></title>
+  <aug>
+    <au><snm>Zhang</snm><fnm>W</fnm></au>
+    <au><snm>Wang</snm><fnm>P</fnm></au>
+    <au><snm>Li</snm><fnm>X</fnm></au>
+    <au><snm>Shen</snm><fnm>D</fnm></au>
+  </aug>
+  <source>Applied Economics</source>
+  <publisher>Taylor \& Francis</publisher>
+  <pubdate>2018</pubdate>
+  <volume>50</volume>
+  <issue>55</issue>
+  <fpage>5950</fpage>
+  <lpage>-5965</lpage>
+</bibl>
+
+<bibl id="B82">
+  <title><p>Shock transmission in the cryptocurrency market. Is Bitcoin the
+  most influential?</p></title>
+  <aug>
+    <au><cnm>Zieba</cnm></au>
+    <au><cnm>Damian</cnm></au>
+    <au><cnm>Kokoszczyski</cnm></au>
+    <au><cnm>Ryszard</cnm></au>
+    <au><cnm>Sledziewska</cnm></au>
+    <au><cnm>Katarzyna</cnm></au>
+  </aug>
+  <source>International Review of Financial Analysis</source>
+  <publisher>Elsevier</publisher>
+  <pubdate>2019</pubdate>
+  <volume>64</volume>
+  <fpage>102</fpage>
+  <lpage>125</lpage>
+</bibl>
+
+</refgrp>
+} % end of \BMCxmlcomment

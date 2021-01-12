@@ -1,0 +1,9 @@
+a matrix of distributions 
+ 1  variables  5  rows 
+ each distibution in the cell is represented by the mean and the standard deviation 
+                   X1             
+Cl.1 [m= -0.13405  ,s= 0.33701 ] 
+Cl.2 [m= -0.50344  ,s= 0.37836 ] 
+Cl.3 [m= -0.010795  ,s= 0.10863 ]
+Cl.4 [m= -0.043414  ,s= 0.86702 ]
+Cl.5 [m= -0.094944  ,s= 3.1234 ] 

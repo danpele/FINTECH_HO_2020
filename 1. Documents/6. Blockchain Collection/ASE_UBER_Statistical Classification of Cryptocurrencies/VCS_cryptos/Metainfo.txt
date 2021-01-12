@@ -1,0 +1,14 @@
+Name of Quantlet: VCS_cryptos
+
+
+Description: 'This quantlet applies the Variance Components Split method to prove complete separation of cryptocurrencies.'
+
+Keywords: cryptocurrency, Variance Components Split, classiffication, multivariate analysis, complete separation
+ 
+Author: Daniel Traian Pele (for R version)
+
+See also: 'SFA_cryptos, FA_cryptos, DFA_cryptos'
+
+Datafiles: '23D.csv'
+
+Example: Run the VCS_cryptos.R file.
