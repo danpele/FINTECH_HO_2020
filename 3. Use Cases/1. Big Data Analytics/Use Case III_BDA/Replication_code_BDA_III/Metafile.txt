@@ -1,9 +1,0 @@
-This is a third Metafile.
-
-Spatial Regression Models to Improve P2P Credit Risk Management
-
-Agosto a., Giudici p., Leach t.
-
-Calabrese et al. (2017) have shown how binary spatial regression models can be exploited to measure contagion effects in credit risk arising from bank failures. To illustrate their methodology, the authors have employed the Bank for International Settlements' data on flows between country banking systems. Here we apply a binary spatial regression model to measure contagion effects arising from corporate failures. To derive interconnectedness measures, we use the World Input-Output Trade (WIOT) statistics between economic sectors. Our application is based on a sample of 1,185 Italian companies. We provide evidence of high levels of contagion risk, which increases the individual credit risk of each company.
-
-Keywords: credit risk, systemic risk, contagion, spatial autoregressive models, binary data

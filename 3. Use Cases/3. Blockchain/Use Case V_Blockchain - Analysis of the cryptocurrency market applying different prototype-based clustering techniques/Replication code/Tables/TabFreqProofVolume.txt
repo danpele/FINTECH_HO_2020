@@ -1,0 +1,34 @@
+                    PercVolume
+ProofType            P70 P80 P90 P99 P100
+  DPoR                 0   0   1   0    0
+  DPoS                 3   1   1   5    2
+  DPoS/LPoS            2   0   0   0    0
+  dPoW/PoW             0   0   0   1    0
+  LFT                  0   0   0   0    1
+  LPoS                 0   0   1   0    0
+  N/A                162  63  84  85   12
+  PoA                  1   0   0   0    0
+  PoB/PoS              1   0   0   0    0
+  POBh                 0   1   0   0    0
+  PoC                  1   0   1   1    0
+  PoI                  0   0   1   0    0
+  PoP                  1   0   0   0    0
+  PoP/PoV/PoQ          1   0   0   0    0
+  PoPP                 0   0   0   1    0
+  PoS                 93  10  12   9    1
+  PoS/LPoS             0   0   0   1    0
+  PoS/PoB              1   0   0   0    0
+  PoS/PoW              1   0   0   0    0
+  PoS/PoW/PoT          0   1   0   0    0
+  PoSign               1   0   0   0    0
+  PoST                 0   0   0   1    0
+  PoW                200  44  40  25   11
+  PoW and PoS          1   0   0   0    0
+  PoW/HiPoS            1   0   0   0    0
+  PoW/nPoS             0   0   0   1    0
+  PoW/PoM/PoSII        1   0   0   0    0
+  PoW/PoS            257  35  26  17    4
+  PoW/PoS              1   1   0   0    0
+  Pow/PoSC             0   0   0   1    0
+  PoWT                 0   0   1   0    0
+  Proof of Authority   0   0   1   0    0
